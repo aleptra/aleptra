@@ -89,7 +89,7 @@
       "template": "Mall",
       "test": "Testa",
       "text": "Text",
-      "title1": "Molntjänsten som fungerar för alla",
+      "title1": "Molntjänsten som<br> fungerar för alla",
       "title1_sub": "Med vår molntjänst behöver man inte investera i egna lokala servrar, personal eller annan infrastruktur. Det som endast krävs för att skapa en fungerande miljö är en internetuppkoppling.",
       "title2": "Hastighet och prestanda",
       "typography": "Typografi",
