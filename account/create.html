@@ -1,0 +1,73 @@
+<script src="https://www.front.nu/dist/front.js" template="../index"></script>
+
+<title globalize="create_aleptra_account"></title>
+
+<template>
+    <aside index="0"></aside>
+    <aside index="1"></aside>
+</template>
+
+<article class="wc_xl bcwhite shade1">
+    <section id="register" class="pauto" storage="api">
+        <h1 globalize="create_aleptra_account"></h1>
+        <h6 class="mt1" globalize="create_aleptra_account_text"></h6>
+        <hr class="mt2">
+
+        <form class="gaph2-" method="post" datasource="{{ storage:api.persons_collection.endpoint }}" dataheader="{{ storage:api.persons_collection.headers }}" ondone="dom.hide('register');dom.show('complete')">
+            <div class="group outline- gaph2-">
+                <input name="first_name" type="text" class="f1 phdark bw1 bos8 bocblack02" placeholder="First Name" globalize="first_name"required>
+                <input name="middle_name" type="text" class="f1 phdark bw1 bos8 bocblack02" placeholder="Middle Name" globalize="middle_name">
+                <input name="last_name" type="text" class="f1 phdark bw1 bos8 bocblack02" placeholder="Last Name" globalize="last_name" required>
+            </div>
+
+            <div class="group">
+                <input name="email" type="text" class="phdark f1 bw1 bos8 bocblack02" placeholder="E-mail" globalize="email" required>
+            </div>
+
+            <i globalize="date_of_birth">Date of birth</i>
+            <div class="box gut2-">
+                <select class="phdark bw1 bos8 bocblack02" name="birth_date_year" variable="i:1900" iterate="140;i++" required>
+                    <option value="" iterate="0" disabled selected>-</option>
+                    <option>{{ i }}</option>
+                </select>
+                <select class="phdark bw1 bos8 bocblack02" name="birth_date_month" variable="i:01" iterate="12;i++" required>
+                    <option value="" iterate="0" disabled selected>-</option>
+                    <option>{{ i }}</option>
+                </select>
+                <select class="phdark bw1 bos8 bocblack02" name="birth_date_day" variable="i:01" iterate="31;i++" required>
+                    <option value="" iterate="0" disabled selected>-</option>
+                    <option>{{ i }}</option>
+                </select>
+            </div>
+
+            <i globalize="country_of_birth">Country of birth</i>
+            <div class="group">
+                <select class="phdark bw1 bos8 bocblack02" id="birth_country" name="birth_country" iterate="true" json="true" datasource="{{ storage:api.countries.endpoint }}?order=country->>eng" dataheader="{{ storage:api.countries.headers }}" ondone="_.populate(this.aEl)" populate="residence_country" required>
+                    <option value="" iterate="0" disabled selected>-</option>
+                    <option value="{{ jsonget:id }}" jsonget="country.eng">{{ jsonget:country.eng }}</option>
+                </select>
+            </div>
+
+            <i globalize="country_of_residence">Country of residence</i>
+            <div class="group">
+                <select class="phdark bw1 bos8 bocblack02" id="residence_country" name="residence_country"></select>
+            </div>
+            <hr>
+            <div class="group db" globalize="page_register_agree_terms">
+                <input name="terms" type="checkbox" value="1" class="mr05" required>Terms
+            </div>
+            <div class="group db" globalize="page_register_agree_database">
+                <input name="participate" type="checkbox" value="1" class="mr05" checked>Enlist
+            </div>
+            <div class="group mt1">
+                <input class="button" type="submit" globalize="create_account">
+            </div>
+        </form>
+    </section>
+
+    <section id="complete" class="pauto tac d0">
+        <h1 globalize="thank_you!">Thank you!</h1>
+        <p globalize="page_register_complete">Your registration will be reviewed within 24 hours.</p>
+        <i class="icon mt2">&#8962;</i><a href="/" globalize="go_to_startpage">Go to startpage</a>
+    </section>
+</article>
