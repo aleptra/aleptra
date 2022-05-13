@@ -54,6 +54,20 @@
     </div>
 </section>
 
+<section class="light">
+    <article class="pauto xs_p0 sm_p0 xm_p0 md_1r lg_p1r xl_p1r xxl_p1r wm70">
+        <div class="box cards m1- p1- br05- bcwhite- border- bo0- tac md_gtc2 xl_gtc3 xxl_gtc3 xxxl_gtc4" json="true" iterate="articles" datasource="assets/json/articles.json">
+            <figure class="shade0 p1">
+                <a href="#" jsonget="link">
+                    <img if="{{ jsonget:thumbnail }};;src:assets/img/placeholder_article.png" jsonget="thumbnail" class="w100" src="">
+                    <p class="fwb pt1" jsonget="title">...</p>
+                    <figcaption jsonget="summary">...</figcaption>
+                </a>
+            </figure>
+        </div>
+    </article>
+</section>
+
 <section class="df lg_w100p- lg_fdc p5p lg_p10p pauto- h100 dark mnauto shade1 mb2 flc">
     <div class="w60 lh2">
         <h2 class="fs18 mb3" globalize="open_source">Open source</h2>

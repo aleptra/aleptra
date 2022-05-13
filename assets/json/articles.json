@@ -1,0 +1,28 @@
+{
+    "articles":[
+        {
+            "id": 1,
+            "title": "A",
+            "summary": "A",
+            "thumbnail": "assets/img/slide1.jpg",
+            "image": "assets/img/slide1.jpg",
+            "link": "#"
+        },
+        {
+            "id": 2,
+            "title": "B",
+            "summary": "B",
+            "thumbnail": "assets/img/slide2.jpg",
+            "image": "assets/img/slide2.jpg",
+            "link": "#"
+        },
+        {
+            "id": 3,
+            "title": "C",
+            "summary": "C",
+            "thumbnail": "assets/img/slide3.jpg",
+            "image": "assets/img/slide3.jpg",
+            "link": "#"
+        }
+    ]
+}
