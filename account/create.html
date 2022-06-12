@@ -40,14 +40,6 @@
                 </select>
             </div>
 
-            <i globalize="country_of_birth">Country of birth</i>
-            <div class="group">
-                <select class="phdark bw1 bos8 bocblack02" id="birth_country" name="birth_country" iterate="true" json="true" datasource="{{ storage:api.countries.endpoint }}?order=country->>eng" dataheader="{{ storage:api.countries.headers }}" ondone="_.populate(this.aEl)" populate="residence_country" required>
-                    <option value="" iterate="0" disabled selected>-</option>
-                    <option value="{{ jsonget:id }}" jsonget="country.eng">{{ jsonget:country.eng }}</option>
-                </select>
-            </div>
-
             <i globalize="country_of_residence">Country of residence</i>
             <div class="group">
                 <select class="phdark bw1 bos8 bocblack02" id="residence_country" name="residence_country"></select>
