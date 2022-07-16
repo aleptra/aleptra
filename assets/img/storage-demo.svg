@@ -5,7 +5,7 @@
    xml:space="preserve"
    version="1.1"
    id="svg16"
-   sodipodi:docname="store.svg"
+   sodipodi:docname="storage-demo.svg"
    inkscape:version="1.2 (dc2aeda, 2022-05-15)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,11 +24,11 @@
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#d1d1d1"
    showgrid="false"
-   inkscape:zoom="9.0769231"
-   inkscape:cx="-0.6059322"
-   inkscape:cy="13.495763"
+   inkscape:zoom="22.346154"
+   inkscape:cx="10.404475"
+   inkscape:cy="11.746988"
    inkscape:window-width="1309"
-   inkscape:window-height="663"
+   inkscape:window-height="801"
    inkscape:window-x="49"
    inkscape:window-y="25"
    inkscape:window-maximized="0"
@@ -48,24 +48,38 @@
   <rect
    stroke="null"
    id="svg_8"
-   fill="#FFFFFF"
+   fill="#ffffff"
    height="13.6"
    width="12.04378"
    class="st1"
-   y="5.93424"
-   x="8.66633" />
+   y="5.0538783"
+   x="8.7250214" />
   <rect
    id="svg_2"
-   fill="#FFFFFF"
-   height="13.6"
+   fill="#ffffff"
+   height="13.376248"
    width="10.9"
    class="st1"
-   y="6.9522"
-   x="6.17779" />
+   y="6.9521999"
+   x="6.1777902"
+   style="stroke-width:0.99174" /><path
+   stroke="#ffa500"
+   id="svg_6-9-2"
+   d="m 3.3836627,6.8227503 7.7815123,-0.032209 1.056425,-0.00437 4.96438,-0.020548"
+   opacity="undefined"
+   stroke-width="0.314757"
+   fill="none"
+   sodipodi:nodetypes="cccc" /><path
+   stroke="#ffa500"
+   id="svg_6-9"
+   d="m 17.026555,6.7529034 7.22e-4,13.8024356"
+   opacity="undefined"
+   stroke-width="0.314757"
+   fill="none" />
   <path
    stroke="#ffa500"
    id="svg_3"
-   d="m7.07779,13.7522l5.77332,0"
+   d="M 7.3015422,13.7522 H 13.074862"
    opacity="undefined"
    stroke-width="0.5"
    fill="none" />
@@ -75,10 +89,10 @@
    stroke-miterlimit="10"
    stroke-width="0.5"
    fill="none"
-   y2="11.83577"
-   x2="15.44202"
-   y1="11.83577"
-   x1="10.92235"
+   y2="11.701518"
+   x2="15.128767"
+   y1="11.701518"
+   x1="10.609097"
    class="st2" />
   <line
    stroke="#ffa500"
@@ -87,14 +101,14 @@
    stroke-width="0.5"
    fill="none"
    y2="15.7522"
-   x2="15.77633"
+   x2="15.284075"
    y1="15.7522"
-   x1="11.25666"
+   x1="10.764405"
    class="st2" />
   <path
    stroke="#ffa500"
    id="svg_6"
-   d="m7.07779,9.7522l7.69561,0"
+   d="M 7.3462926,9.5284478 H 15.041903"
    opacity="undefined"
    stroke-width="0.5"
    fill="none" />
@@ -104,10 +118,10 @@
    stroke-miterlimit="10"
    stroke-width="0.5"
    fill="none"
-   y2="17.7522"
-   x2="12.85112"
-   y1="17.7522"
-   x1="7.07779"
+   y2="17.752199"
+   x2="13.119622"
+   y1="17.752199"
+   x1="7.3462925"
    class="st2" />
  </g>
 <metadata
