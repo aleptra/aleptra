@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="26"
+   height="26"
+   xml:space="preserve"
+   version="1.1"
+   id="svg16"
+   sodipodi:docname="store.svg"
+   inkscape:version="1.2 (dc2aeda, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"><defs
+   id="defs20" /><sodipodi:namedview
+   id="namedview18"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false"
+   inkscape:zoom="9.0769231"
+   inkscape:cx="-0.6059322"
+   inkscape:cy="13.495763"
+   inkscape:window-width="1309"
+   inkscape:window-height="663"
+   inkscape:window-x="49"
+   inkscape:window-y="25"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="g14" />
+ <title
+   id="title2">1</title>
+
+ <g
+   id="g14">
+  <title
+   id="title4">Layer 1</title>
+  <path
+   id="svg_1"
+   d="m3.6,0l18.8,0c2,0 3.6,1.6 3.6,3.6l0,0l0,18.8c0,2 -1.6,3.6 -3.6,3.6l0,0l-18.8,0c-2,0 -3.6,-1.6 -3.6,-3.6l0,0l0,-18.8c0,-2 1.6,-3.6 3.6,-3.6l0,0z"
+   opacity="undefined"
+   fill="#ffa500" />
+  <rect
+   stroke="null"
+   id="svg_8"
+   fill="#FFFFFF"
+   height="13.6"
+   width="12.04378"
+   class="st1"
+   y="5.93424"
+   x="8.66633" />
+  <rect
+   id="svg_2"
+   fill="#FFFFFF"
+   height="13.6"
+   width="10.9"
+   class="st1"
+   y="6.9522"
+   x="6.17779" />
+  <path
+   stroke="#ffa500"
+   id="svg_3"
+   d="m7.07779,13.7522l5.77332,0"
+   opacity="undefined"
+   stroke-width="0.5"
+   fill="none" />
+  <line
+   stroke="#ffa500"
+   id="svg_4"
+   stroke-miterlimit="10"
+   stroke-width="0.5"
+   fill="none"
+   y2="11.83577"
+   x2="15.44202"
+   y1="11.83577"
+   x1="10.92235"
+   class="st2" />
+  <line
+   stroke="#ffa500"
+   id="svg_5"
+   stroke-miterlimit="10"
+   stroke-width="0.5"
+   fill="none"
+   y2="15.7522"
+   x2="15.77633"
+   y1="15.7522"
+   x1="11.25666"
+   class="st2" />
+  <path
+   stroke="#ffa500"
+   id="svg_6"
+   d="m7.07779,9.7522l7.69561,0"
+   opacity="undefined"
+   stroke-width="0.5"
+   fill="none" />
+  <line
+   stroke="#ffa500"
+   id="svg_7"
+   stroke-miterlimit="10"
+   stroke-width="0.5"
+   fill="none"
+   y2="17.7522"
+   x2="12.85112"
+   y1="17.7522"
+   x1="7.07779"
+   class="st2" />
+ </g>
+<metadata
+   id="metadata196"><rdf:RDF><cc:Work
+       rdf:about=""><dc:title>1</dc:title></cc:Work></rdf:RDF></metadata></svg>
