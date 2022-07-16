@@ -16,7 +16,7 @@
 
         <div class="aside sm_pl4 lg_pl4 xl_pl5 lg_gan mt5 mb3 tac">
             <div class="xm_z12">
-                <a href="account/create.html" class="button bos6 bw1 bocwhite bcblack05 xm_w100p mb1 h2 ttn" globalize="create_free_account"></a>
+                <a href="account/create.html" class="button bos6 bw1 bocwhite bcblack05 xm_w100p mb1 h3 ttn" globalize="create_free_account"></a>
             </div>
             <p class="w100 fs08 white- ts1"><a href="#account" modalurl="account/about.html" globalize="what_is_aleptra_account"></a><i class="icon ml05">&#63;</i></p>
         </div>
@@ -59,30 +59,22 @@
     </div>
 </section>
 
-<section class="light">
+<section>
     <article class="pauto xs_p0 sm_p0 xm_p0 md_1r lg_p1r xl_p1r xxl_p1r wm70">
-        <div class="box cards m1- p1- tac md_gtc2 xl_gtc2 xxl_gtc2 xxxl_gtc4" json="true" iterate="articles" datasource="assets/json/articles.json">
+        <div class="box cards m1- p1- tac md_gtc4 xl_gtc4 xxl_gtc4 xxxl_gtc4" json="true" iterate="examples" datasource="assets/json/showcase.json">
             <figure class="shade0 p1">
-                <a href="#" jsonget="link">
-                    <img if="{{ jsonget:thumbnail }};;src:assets/img/placeholder_article.png" jsonget="thumbnail" class="w100" src="">
-                    <p class="fwb pt1" jsonget="title">...</p>
-                    <figcaption jsonget="summary">...</figcaption>
-                </a>
+                <a jsonget="url" target="_blank"><img jsonget="logo" class="w100" src=""></a>
             </figure>
         </div>
     </article>
 </section>
 
-<section class="df lg_w100p- lg_fdc p5p lg_p10p pauto- h100 dark mnauto shade1 mb2 flc">
+<section class="df lg_w100p- lg_fdc p5p lg_p10p pauto- h100 tac dark mnauto shade1 mb2 flc">
     <div class="w60 lh2">
-        <h2 class="fs18 mb3" globalize="open_source">demo</h2>
-        <p globalize="open_source_description">demo</p>
-        <div class="gap1- lg_gap0- lg_w100p- mb1- mt2 z13">
-          <a href="https://github.com/3EL/front" class="button" target="_blank" globalize="explore_repository">Go to repository</a><a href="https://github.com/3EL/front/blob/master/LICENSE" class="button outlined" target="_blank" globalize="read_license">Läs license</a>
-        </div>
-    </div>
-    <div class="w40 lg_o1n">
-        <img src="assets/img/open_source_1qxw.svg" class="w100">
+        <h2 class="fs18 mb2" globalize="ready_to_start">Ready to start?</h2>
+        <p globalize="create_aleptra_account_text"></p>
+        <p globalize="or"></p>
+        <a href="account/create.html" class="button bos6 bw1 bocwhite bcblack05 xm_w100p mt1 h3 ttn" globalize="create_free_account">Skapa kostnadsfritt konto</a>
     </div>
 </section>
 
