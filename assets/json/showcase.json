@@ -1,18 +1,22 @@
 {
-    "examples":[
-        {
-            "id": 1,
-            "title": "Aramean Institute",
-            "logo": "https://www.aramean.institute/assets/img/logo_fb.png",
-            "url": "https://www.aramean.institute",
-            "type": "Institute"
-        },
-        {
-            "id": 2,
-            "title": "Aramean Center",
-            "logo": "https://www.aramean.center/assets/img/logo_fb.png",
-            "url": "https://www.aramean.center",
-            "type": "Organization"
-        }
-    ]
+  "examples": [
+    {
+      "title": "Front",
+      "logo": "https://www.front.nu/assets/logo_black_trans.svg",
+      "url": "https://www.front.nu",
+      "type": "Software"
+    },
+    {
+      "title": "Aramean Institute",
+      "logo": "https://www.aramean.institute/assets/img/logo.svg",
+      "url": "https://www.aramean.institute",
+      "type": "Institute"
+    },
+    {
+      "title": "Aramean Center",
+      "logo": "https://www.aramean.center/assets/img/logo.svg",
+      "url": "https://www.aramean.center",
+      "type": "Organization"
+    }
+  ]
 }
