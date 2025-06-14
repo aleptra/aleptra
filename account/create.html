@@ -42,7 +42,9 @@
 
             <i globalize="country_of_residence">Country of residence</i>
             <div class="group">
-                <select class="phdark bw1 bos8 bocblack02" id="residence_country" name="residence_country"></select>
+                <select class="phdark bw1 bos8 bocblack02" id="birth_country" name="birth_country" iterate="true" json="true" datasource="{{ storage:api.country.endpoint }}&order=country->>eng" dataheader="{{ storage:api.countries.headers }}" ondone="_.populate(this.aEl)" populate="residence_country" placeholder="-" required>
+                    <option value="{{ jsonget:id }}" jsonget="country.eng">{{ jsonget:country.eng }}</option>
+                </select>
             </div>
             <hr>
             <div class="group db" globalize="page_register_agree_terms">
