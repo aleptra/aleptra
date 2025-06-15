@@ -5,7 +5,8 @@
       "headers": "apikey:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYxNzY0NTM0NSwiZXhwIjoxOTMzMjIxMzQ1fQ.pG5ihvVIIwh-xbRHF7H2UWExGNxcQmvsQFrp-BJ_UlQ"
     },
     "country": {
-      "endpoint": "https://api.aleptra.com/geography/?table=geography_country"
+      "endpoint": "https://api.aleptra.com/geography/?table=geography_country",
+      "headers": ""
     },
     "dictionary": {
       "endpoint": "https://fepmwokzjfhuyhyggktb.supabase.co/rest/v1/words",
