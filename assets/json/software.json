@@ -5,10 +5,10 @@
   },
   {
     "name": "Draw",
-    "icon": "https://www.aleptra.com/assets/img/draw.svg"
+    "icon": "assets/icons/draw.svg"
   },
   {
     "name": "Storage",
-    "icon": "https://www.aleptra.com/assets/img/storage-demo.svg"
+    "icon": "assets/icons/storage.svg"
   }
 ]
