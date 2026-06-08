@@ -1,0 +1,69 @@
+<script src="https://cdn.front.nu/nightly/front.js"></script>
+<template srcdoc="../../index" src="../../_templates/account"></template>
+<title globalize-get>Login</title>
+
+<div wave--load wave--conf="src:assets/img/clouds-orginal.jpg;slices:40;speed:0.01;amount:6" height="100%" width="100%"
+  absolute>
+</div>
+<article flex alignself="center" bgcolor="white" screen-xxs="width:[90%]" screen-xl="width:[40rem]" height="100%">
+  <section flex flexdirection="column" alignitems="center" justifycontent="center" height="100%" width="100%"
+    bgcolor="rgba(0,0,0, .1)" relative>
+    <div screen-xxs="flexdirection:[column]" screen-sm="flexdirection:[column]" screen-md="flexdirection:[column]"
+      screen-xl="flexdirection:[row]" flex>
+
+      <section flex flexdirection="column" id="register" storage="api" align="center">
+        <h1 globalize-get>Log in to your account</h1>
+        <h6 margintop="1rem" marginbottom="2rem" globalize-get color="gold">Access your Cloud Footprint</h6>
+
+        <img margin="0 auto" marginbottom="1rem" height="8%" maxwidth="unset" src="assets/img/logo.svg">
+
+        <form method="post" alignitems="center" color="black" bindasset="endpoint:api.persons_collection.endpoint"
+          action="{endpoint}" data-onsuccess="hide:#register;show:#complete" data-onerror="show:#error">
+
+          <div flex flexdirection="column" boxshadow="1px 1px 10px black" bgcolor="rgba(0,0,0, .5)" width="65%"
+            radius="0.5rem" padding="1rem">
+            <input name="email" bgcolor="whitesmoke" type="text" padding="0.75rem" radius="2px 2px 0 0"
+              class="f1 phdark" placeholder="E-mail" globalize-get form-invalid="#email_tip:[Please enter your email]"
+              required>
+            <small id="email_tip" color="red" lineheight="3"></small>
+            <input name="password" margintop="1px" bgcolor="whitesmoke" type="password" padding="0.75rem"
+              radius="0 0 2px 2px" class="phdark" placeholder="Password" globalize-get
+              form-invalid="#first_name_tip:[Please enter your password]" required><small id="first_name_tip"
+              color="red" lineheight="3"></small>
+            <input margintop="1rem" minheight="2.7rem" radius="1rem" padding="0.5rem 1.4rem 0.5rem 1.4rem"
+              minheight="2.7rem" border="1px solid silver" bgcolor="rgba(0,0,0, .6)" mouseover="bgcolor:[black]"
+              mouseout="bgcolor:[rgba(0,0,0, .6)]" color="white" color="white" class="button" type="submit"
+              value="Login" globalize-get>
+          </div>
+
+
+          <div id="error" bgcolor="red" color="yellow" margintop="1rem" marginbottom="2rem" padding="1rem" hide>
+            Something went wrong. Please try again.</div>
+
+          <div class="group mt1" alignself="center">
+
+
+
+          </div>
+
+          <hr margintop="1rem" width="100%" bgcolor="rgba(0,0,0, .2)">
+
+          <div color="white" margintop="1rem" alignself="center" gap="0.75rem">
+            <a href="account/recover" globalize-get bindglobal="href:href">Forgot account?</a>
+            <a href="account/create" globalize-get bindglobal="href:href">Create an account</a>
+          </div>
+        </form>
+
+      </section>
+    </div>
+  </section>
+
+  <section id="complete" class="pauto tac" hide>
+    <h1 globalize-get="thank_you!">Thank you!</h1>
+    <p globalize-get="page_register_complete">Your registration will be reviewed within 24 hours.</p>
+    <i class="icon mt2">&#8962;</i><a href="/" globalize-get="go_to_startpage">Go to startpage</a>
+  </section>
+</article>
+
+<div include="_includes/terms.html"></div>
+<section include="_includes/footer.html"></section>

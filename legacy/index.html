@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" cache="no" class="fsauto darktheme">
+
+<head>
+  <title>Aleptra</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge;ie=10;chrome=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <base env="local:/;prod:/">
+  <link type="text/css" href="https://cdn.front.nu/dist/front.css" rel="stylesheet">
+  <link type="text/css" href="https://cdn.front.nu/dist/design/front/theme/front.css?4" rel="stylesheet">
+  <link type="image/x-icon" href="./favicon.ico" rel="shortcut icon">
+  <script src="https://cdn.front.nu/1.0.0/front.js" module="navigate;data;globalize"
+    store="assets/json/vars/api:api"></script>
+</head>
+
+<body bgcolor="black">
+  <div id="navloader" class="navloader pa t0 w100 bcwhite03 d0">
+    <div id="navprogress" class="bcwhite08"></div>
+  </div>
+  <input class="togglebar" type="checkbox" id="togglebar">
+  <header>
+    <nav class="topbar dark shade1 h4 md_fs70 lg_fs80 xl_fs90 gap2- pr1 pl2 test- fs90 tac" selective="true">
+      <!--<label class="button md_du" for="togglebar" id="togglebar" eventif=";hide"><i class="icon24">&#8801;</i></label>-->
+      <a href="#menu" class="button md_du p0 shade1"><i class="icon24">≡</i></a>
+      <figure class="mh30p pl2 pr2"><a class="b0" href="/" key="0"><img src="assets/img/logo.svg"></a></figure>
+      <a class="md_dn fwb d0" href="#" key="1" globalize-get>IT Products</a>
+
+      <details class="md_dn">
+        <summary bold globalize-get>IT Products</summary>
+        <div class="pa">
+          <dl class="bcblack p2 fdc gap2 bs5 fdc">
+            <dt>
+              <h5 class="pt2 mb05 fwn" globalize-get>Cloud applications</h5>
+            </dt>
+            <dd><a href="cloud/note" class="fs10"><img src="https://note.aleptra.com/assets/img/icon.svg"
+                  class="w2r mr05">Note</a></dd>
+          </dl>
+        </div>
+      </details>
+
+      <a class="md_dn fwb d0" href="#" key="1" globalize-get="hr_services">HR Services</a>
+
+      <details class="md_dn">
+        <summary globalize-get="hr_services" class="fwb">HR Services</summary>
+        <div class="pa">
+          <dl class="bcblack p2 fdc gap2 bs5 fdc">
+            <dt>
+              <h5 globalize-get="software_engineering" class="pt2 mb05 fwn">Software engineering</h5>
+            </dt>
+            <dd><a href="">Insourcing (Inhouse)</a></dd>
+            <dd><a href="">Outsourcing</a></dd>
+          </dl>
+        </div>
+      </details>
+
+      <a href="languages.html" class="fs80 fr" key="4" globalize-get="language"><i
+          class="icon16">&#127760;</i>Languages</a>
+      <a href="account" class="fs80" key="4" globalize-get="login"><i class="icon16">&#9031;</i>.</a>
+
+      <div id="menu" class="modal bcblack menu br0">
+        <nav class="topbar flc0 shade h4 pl2 gap2- sblack-">
+          <a href="#" class="button xl_du p0 shade1"><i class="icon24">&#10060;</i></a>
+        </nav>
+        <section>
+          <nav class="sidebar pb2 w100 fs13 gaph2-">
+            <hr class="p0 bcwhite01">
+            <a href="#" globalize-get="it_products">IT Products</a>
+            <hr class="p0 bcwhite01">
+            <a href="#" globalize-get="hr_services">HR Services</a>
+            <hr class="p0 bcwhite01">
+          </nav>
+    </nav>
+    </section>
+    </div>
+    </nav>
+  </header>
+  <nav></nav>
+  <aside></aside>
+  <main class="pauto" bgcolor="white" include="_includes/home.html"></main>
+  <aside class="lg_dn lg_gan"></aside>
+  <footer></footer>
+</body>
+
+</html>

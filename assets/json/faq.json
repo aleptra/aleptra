@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "question": "Vad är Aleptra?",
+    "answer": "Aleptra är en plattform som ger dig överblick över molnkostnader, säkerhet och användning — både on-prem och i molnet."
+  },
+  {
+    "id": "2",
+    "question": "Kan jag använda Aleptra med egen datalagring?",
+    "answer": "Ja. Du kan drifta din data lokalt på egna servrar och ändå använda plattformen online för övervakning och analys."
+  },
+  {
+    "id": "3",
+    "question": "Hur flyttar jag från on-prem till molnet?",
+    "answer": "Aleptra stöder enkel migrering mellan on-prem och moln, så du kan växla tillbaka och fram när dina behov förändras."
+  },
+  {
+    "id": "4",
+    "question": "Hur kommer jag igång?",
+    "answer": "Skapa ett konto via sidan för registrering, anslut dina molntjänster och följ guiden för att ställa in din översikt."
+  }
+]

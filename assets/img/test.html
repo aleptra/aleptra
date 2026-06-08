@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sharp Cloud Animation</title>
+  <style>
+    body {
+      margin: 0 overflow: hidden background-color: #030d22
+    }
+
+    canvas {
+      display: block width: 100vw height: 100vh
+    }
+  </style>
+</head>
+
+<body>
+
+  <canvas id="cloudCanvas"></canvas>
+
+  <script>
+    var canvas = document.getElementById('cloudCanvas')
+    var ctx = canvas.getContext('2d')
+
+    var img = new Image()
+    img.src = 'clouds-orginal.jpg'
+
+    var time = 0
+
+    function resize() {
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
+    }
+    window.addEventListener('resize', resize)
+
+    img.onload = function () {
+      resize()
+      animate()
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+      var imgRatio = img.width / img.height
+      var canvasRatio = canvas.width / canvas.height
+      var renderWidth = canvas.width
+      var renderHeight = canvas.height
+
+      if (canvasRatio > imgRatio) {
+        renderHeight = canvas.width / imgRatio
+      } else {
+        renderWidth = canvas.height * imgRatio
+      }
+
+      var offsetX = (canvas.width - renderWidth) / 2
+      var offsetY = (canvas.height - renderHeight) / 2
+
+      // Very slow time step to keep things gentle
+      time += 0.01
+
+      // 1. Draw the sharp, unmoving image first as our solid base
+      ctx.drawImage(img, offsetX, offsetY, renderWidth, renderHeight)
+
+      // 2. Draw 40 slightly overlapping horizontal strips.
+      // Overlapping by 2 extra pixels removes the "annoying lines" gap completely.
+      var slices = 40
+      var sliceHeight = renderHeight / slices
+      var overlap = 2
+
+      for (var i = 0; i < slices; i++) {
+        var sy = (img.height / slices) * i
+        var sh = img.height / slices
+        var dy = offsetY + (sliceHeight * i)
+
+        // A tiny horizontal shift (maximum 6 pixels)
+        // This simulates heat haze or gentle wind without moving the whole image
+        var waveX = Math.sin(i * 0.15 + time) * 6
+
+        ctx.drawImage(
+          img,
+          0, sy, img.width, sh,
+          offsetX + waveX, dy, renderWidth, sliceHeight + overlap
+        )
+      }
+
+      requestAnimationFrame(animate)
+    }
+  </script>
+</body>
+
+</html>

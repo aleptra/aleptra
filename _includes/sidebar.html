@@ -1,0 +1,81 @@
+<nav class="sidebar white-"
+  bgcolor="black" zindex="0" flexdirection="row" wordbreak="normal">
+  <!-- Backdrop -->
+  <div screen-xs="show" screen-lg="hide" bgcolor="black08" zindex="-1" width="100%" height="100%" top="0" right="0" fixed></div>
+  <!-- End Backdrop -->
+  <div padding="2%" screen-xs="flex;fontsize:[70%]" screen-md="fontsize:[90%]" screen-lg="hide" align="center" style="border-right: 1px solid #202020">
+    <a href="documentation" whitespace="nowrap" padding="0.5rem"><i class="icon32" bindglobal="href:href" if="([{href}]~[/documentation])/color:[white]?color:[#303030]">●</i>Documentation</a>
+    <a href="marketplace" whitespace="nowrap" padding="0.5rem"><i class="icon32" bindglobal="href:href" if="([{href}]~[/marketplace])/color:[white]?color:[#303030]">●</i>Marketplace</a>
+    <a href="playground.html" whitespace="nowrap" padding="0.5rem"><i class="icon32" bindglobal="href:href" if="([{href}]~[/playground])/color:[white]?color:[#303030]">●</i>Playground</a>
+  </div>
+  <form
+    width="inherit"
+    screen-xs="padding:[0]"
+    screen-sm="padding:[0]"
+    screen-md="padding:[0 2.5rem 0 2.5rem]"
+    screen-lg="padding:[0px 2rem 0rem 2rem]" form-filter="true">
+    <div screen-xs="show" screen-lg="hide">
+      <a click="toggledisplay:*aside[0]" keyboard-key="m" keyboard-action="click" keyboard-scope="body"
+        class="button pl1"><i class="icon32">&#171;</i></a>
+      <hr>
+      <input id="query2" bgcolor="white01" width="100%" height="3rem" padding="1rem" class="bs1" bindvar=":" type="text"
+        placeholder="Search in documentation ..." autocomplete="off">
+    </div>
+    <details open paddingtop="2rem" lineheight="2">
+      <summary globalize-get bold>Getting Started</summary>
+      <a margintop="1rem" href="documentation" globalize-get bindglobal="title:title"
+        if="([{title}]:[Introduction])/bold">Introduction</a>
+      <a href="documentation/installation" globalize-get bindglobal="href:href"
+        if="([{href}]~[/documentation/installation])/bold">Installation</a>
+      <details paddingbottom="1rem" bindglobal="href:href" if="([{href}]~[/documentation/fundamentals])/setattr:[open]">
+        <summary globalize-get bindglobal="href:href" if="([{href}]~[/documentation/fundamentals])/bold">Fundamentals</summary>
+        <a href="documentation/fundamentals/attributes.html" globalize-get bindglobal="href:href"
+          if="([{href}]~[/fundamentals/attributes])/bold">Attributes</a>
+        <a href="documentation/fundamentals/variables.html" globalize-get bindglobal="href:href"
+          if="([{href}]~[/fundamentals/variables])/bold">Variables</a>
+        <a href="documentation/fundamentals/pages.html" globalize-get bindglobal="href:href"
+          if="([{href}]~[/fundamentals/pages])/bold">Pages</a>
+        <a href="documentation/fundamentals/templates.html" globalize-get bindglobal="href:href"
+          if="([{href}]~[/fundamentals/templates])/bold">Templates</a>
+        <a href="documentation/fundamentals/modules.html" globalize-get bindglobal="href:href"
+          if="([{href}]~[/fundamentals/modules])/bold">Modules</a>
+        <a href="documentation/fundamentals/plugins.html" globalize-get bindglobal="href:href"
+          if="([{href}]~[/fundamentals/plugins])/bold">Plugins</a>
+      </details>
+    </details>
+    <details bindglobal="href:href" if="([{href}]~[/reference])/setattr:[open]" lineheight="2">
+      <summary globalize-get bold>Reference</summary>
+      <details bindglobal="href:href" if="([{href}]~[/reference/ftml])/setattr:[open]">
+        <summary bindglobal="href:href" if="([{href}]~[/reference/ftml])/bold">FTML</summary>
+        <a href="documentation/reference/ftml/attributes.html" globalize-get bindglobal="href:href"
+          if="([{href}]~[/reference/ftml/attribute])/bold">Attributes</a>
+        <a href="documentation/reference/ftml/variables.html" globalize-get bindglobal="href:href"
+          if="([{href}]~[/reference/ftml/variable])/bold">Variables</a>
+      </details>
+      <details paddingbottom="1rem" bindglobal="href:href"
+        if="([{href}]~[/reference/api])/setattr:[open]">
+        <summary bindglobal="href:href" if="([{href}]~[/reference/api])/bold">API</summary>
+        <a href="documentation/reference/api/functions.html" globalize-get bindglobal="href:href"
+          if="([{href}]~[/api/functions])/bold">Functions</a>
+      </details>
+    </details>
+    <details bindglobal="href:href" if="([{href}]~[/guides])/setattr:[open]" lineheight="2">
+      <summary globalize-get bold>Guides</summary>
+      <a href="documentation/guides/advanced-templating.html" globalize-get bindglobal="href:href"
+        if="([{href}]~[/guides/advanced-templating])/bold" lineheight="1.5">Advanced Templating</a>
+      <a href="documentation/guides/dynamic-data-rendering.html" globalize-get bindglobal="href:href"
+        if="([{href}]~[/guides/dynamic-data-rendering])/bold" lineheight="1.5">Dynamic Data Rendering</a>
+      <a href="documentation/guides/plugin-development.html" globalize-get bindglobal="href:href"
+        if="([{href}]~[/guides/plugin-development])/bold" lineheight="1.5" marginbottom="1rem">Plugin Development</a>
+    </details>
+    <details bindglobal="href:href" if="([{href}]~[/concepts])/setattr:[open]" lineheight="2">
+      <summary globalize-get bold>Concepts</summary>
+      <a href="documentation/concepts/front.html" globalize-get bindglobal="href:href"
+        if="([{href}]~[/concepts/front])/bold">Framework</a>
+      <a href="documentation/concepts/ftml.html" globalize-get bindglobal="href:href"
+        if="([{href}]~[/concepts/ftml])/bold">Language</a>
+      <a href="documentation/concepts/philosophy.html" globalize-get bindglobal="href:href"
+        if="([{href}]~[/concepts/philosophy])/bold">Philosophy</a>
+    </details>
+  </form>
+</nav>

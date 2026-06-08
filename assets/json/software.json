@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Note",
+    "icon": "https://note.aleptra.com/assets/img/icon.svg"
+  },
+  {
+    "name": "Draw",
+    "icon": "https://www.aleptra.com/assets/img/draw.svg"
+  },
+  {
+    "name": "Storage",
+    "icon": "https://www.aleptra.com/assets/img/storage-demo.svg"
+  }
+]
