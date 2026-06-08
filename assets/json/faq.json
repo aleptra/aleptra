@@ -1,32 +1,32 @@
 [
   {
     "id": "1",
-    "question": "Vad är Aleptra?",
-    "answer": "Aleptra är en plattform som ger dig överblick över molnkostnader, säkerhet och användning — både on-prem och i molnet."
+    "question": "What is Aleptra?",
+    "answer": "Aleptra is a platform that gives you visibility into cloud costs, security and usage — both on-prem and in the cloud."
   },
   {
     "id": "2",
-    "question": "Kan jag använda Aleptra med egen datalagring?",
-    "answer": "Ja. Du kan drifta din data lokalt på egna servrar och ändå använda plattformen online för övervakning och analys."
+    "question": "Can I use Aleptra with my own data storage?",
+    "answer": "Yes. You can host your data on local servers while using the platform online for monitoring and analysis."
   },
   {
     "id": "3",
-    "question": "Hur flyttar jag från on-prem till molnet?",
-    "answer": "Aleptra stöder enkel migrering mellan on-prem och moln, så du kan växla tillbaka och fram när dina behov förändras."
+    "question": "How do I move from on-prem to the cloud?",
+    "answer": "Aleptra supports easy migration between on-prem and cloud so you can switch back and forth as your needs change."
   },
   {
     "id": "4",
-    "question": "Hur kommer jag igång?",
-    "answer": "Skapa ett konto via sidan för registrering, anslut dina molntjänster och följ guiden för att ställa in din översikt."
+    "question": "How do I get started?",
+    "answer": "Create an account, connect your cloud services and follow the setup guide to configure your overview."
   },
   {
     "id": "5",
-    "question": "Är Aleptra säkert?",
-    "answer": "Ja. Aleptra använder kryptering och skyddar din data när du kör både on-prem och i molnet."
+    "question": "Is Aleptra secure?",
+    "answer": "Yes. Aleptra uses encryption and protects your data when you run both on-prem and in the cloud."
   },
   {
     "id": "6",
-    "question": "Fungerar Aleptra med flera molnplattformar?",
-    "answer": "Ja. Aleptra kan samla data från flera leverantörer samtidigt, så du får en gemensam överblick över hela din molnmiljö."
+    "question": "Does Aleptra work with multiple cloud platforms?",
+    "answer": "Yes. Aleptra can collect data from multiple providers at once, giving you a unified view across your cloud environment."
   }
 ]
