@@ -15,8 +15,8 @@
   <section id="apps" height="100%" flex grid="1fr 1fr" style="grid-template-columns: 1fr 1fr 1fr 1fr 1fr"
     data-src="assets/json/software.json" filtersearch--onempty="#empty" data-iterate="true">
     <figure filtersearch--select>
-      <a flexdirection="column" align="center" fontsize="15px"><img data-get="icon" width="4rem" height="4rem"><span
-          data-get="name" margin="5px auto"></span></a>
+      <a data-set="name:name" href="cloud/?app={name}" flexdirection="column" align="center" fontsize="15px"><img
+          data-get="icon" width="4rem" height="4rem"><span data-get="name" margin="5px auto"></span></a>
     </figure>
   </section>
 </dialog>
