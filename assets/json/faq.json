@@ -18,5 +18,15 @@
     "id": "4",
     "question": "Hur kommer jag igång?",
     "answer": "Skapa ett konto via sidan för registrering, anslut dina molntjänster och följ guiden för att ställa in din översikt."
+  },
+  {
+    "id": "5",
+    "question": "Är Aleptra säkert?",
+    "answer": "Ja. Aleptra använder kryptering och skyddar din data när du kör både on-prem och i molnet."
+  },
+  {
+    "id": "6",
+    "question": "Fungerar Aleptra med flera molnplattformar?",
+    "answer": "Ja. Aleptra kan samla data från flera leverantörer samtidigt, så du får en gemensam överblick över hela din molnmiljö."
   }
 ]

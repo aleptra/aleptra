@@ -28,46 +28,64 @@
 
   </section>
 
-  <section bgcolor="rgba(255,255,255,0.9)" color="black" width="100%" screen-xs="align:[center]"
-    screen-md="align:[left]" height="auto" paddingbottom="7rem">
+  <section bgcolor="whitesmoke" color="black" width="100%" screen-xs="align:[center]" screen-md="align:[left]"
+    height="auto" paddingbottom="7rem">
 
     <div screen-xs="width:[85%]" screen-sm="width:[85%]" screen-md="width:[80%]" screen-xl="width:[70%]"
       screen-xxl="width:[60rem]" screen-xxxl="width:[60rem]" screen-wide="width:[70rem]" margin="0 auto" flex
       flexdirection="column">
 
-      <div flex flexdirection="column" padding="1rem" alignitems="center">
-        <h2 bold lineheight="3" screen-xxs="fontsize:[170%]" screen-md="fontsize:[200%]" screen-wide="fontsize:[270%]">
+      <div flex flexdirection="column" margintop="2rem" padding="1rem" alignitems="center">
+        <h2 bold lineheight="2" screen-xxs="fontsize:[170%]" screen-md="fontsize:[200%]" screen-wide="fontsize:[270%]">
           Why Aleptra?</h2>
         <h6 lineheight="1.6">Manage cloud services with a single view for usage, spend and security.</h6>
       </div>
 
       <div grid gridcolumns="1fr 1fr 1fr" gap="2rem" margintop="3rem">
-        <div flexdirection="column" flex="1" bgcolor="white" radius="1rem" padding="1.5rem" border="1px solid #ddd">
-          <img src="assets/icons/eye.svg">
+        <div flexdirection="column" flex="1" alignitems="center" bgcolor="white" radius="1rem" padding="1.5rem"
+          border="1px solid #ddd">
+          <img src="assets/icons/eye.svg" width="60%">
           <h6 lineheight="3">Visibility</h6>
           <p lineheight="1.5" color="#555">See your entire cloud footprint across providers, accounts and environments
             in one dashboard.</p>
         </div>
-        <div flexdirection="column" flex="1" bgcolor="white" radius="1rem" padding="1.5rem" border="1px solid #ddd">
-          <img src="assets/icons/cost.svg">
+        <div flexdirection="column" flex="1" alignitems="center" bgcolor="white" radius="1rem" padding="1.5rem"
+          border="1px solid #ddd">
+          <img src="assets/icons/cost.svg" width="60%">
           <h6 lineheight="3">Cost</h6>
           <p lineheight="1.5" color="#555">Track spend, detect waste and prioritize the most impactful cloud savings.
           </p>
         </div>
-        <div flexdirection="column" flex="1" bgcolor="white" radius="1rem" padding="1.5rem" border="1px solid #ddd">
-          <img src="assets/icons/security.svg">
+        <div flexdirection="column" flex="1" alignitems="center" bgcolor="white" radius="1rem" padding="1.5rem"
+          border="1px solid #ddd">
+          <img src="assets/icons/security.svg" width="60%">
           <h6 lineheight="3">Security</h6>
           <p lineheight="1.5" color="#555">Identify risky services, governance gaps and cloud configuration issues
             quickly.</p>
         </div>
-        <div flexdirection="column" flex="1" bgcolor="white" radius="1rem" padding="1.5rem" border="1px solid #ddd">
-          <img src="assets/icons/onprem.svg">
+        <div flexdirection="column" flex="1" alignitems="center" bgcolor="white" radius="1rem" padding="1.5rem"
+          border="1px solid #ddd">
+          <img src="assets/icons/onprem.svg" width="60%">
           <h6 lineheight="1.2">On-prem</h6>
           <p lineheight="1.5" color="#555">Host sensitive data on-prem while managing it from the online Aleptra
-            platform, then
-            migrate to cloud and back whenever your needs change.</p>
+            platform, then migrate to cloud and back whenever your needs change.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section bgcolor="rgba(255,255,255,0.9)" height="unset" screen-xs="padding:[4rem 2rem]" screen-wide="padding:[5rem]"
+    bgcolor="white" color="black">
+    <div screen-xs="width:[85%]" screen-sm="width:[85%]" screen-md="width:[80%]" screen-xl="width:[70%]"
+      screen-xxl="width:[60rem]" screen-xxxl="width:[60rem]" screen-wide="width:[70rem]" margin="0 auto">
+      <h3 bold margintop="2rem" marginbottom="1.5rem">Vanliga frågor och svar</h3>
+      <nav class="tabs accordions" data-iterate="true" data-src="assets/json/faq.json">
+        <input type="radio" name="faq-panel" data-set="id:id" id="faq{id}">
+        <label data-set="id:id" for="faq{id}" data-get="question"></label>
+        <section>
+          <p data-get="answer"></p>
+        </section>
+      </nav>
     </div>
   </section>
 
