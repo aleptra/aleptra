@@ -12,6 +12,7 @@
   },
   {
     "name": "Storage",
-    "icon": "/assets/icons/storage.svg"
+    "icon": "/assets/icons/storage.svg",
+    "color": "orange"
   }
 ]
