@@ -1,14 +1,17 @@
 [
   {
     "name": "Note",
-    "icon": "https://note.aleptra.com/assets/img/icon.svg"
+    "icon": "https://note.aleptra.com/assets/img/icon.svg",
+    "color": "indigo",
+    "description": "Note is an application for taking notes and collaborating with others free-form."
   },
   {
     "name": "Draw",
-    "icon": "assets/icons/draw.svg"
+    "icon": "/assets/icons/draw.svg",
+    "color": "indianred"
   },
   {
     "name": "Storage",
-    "icon": "assets/icons/storage.svg"
+    "icon": "/assets/icons/storage.svg"
   }
 ]

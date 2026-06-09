@@ -2,26 +2,26 @@
 <template srcdoc="../../index" bindvar="tes:test" src="../../_templates/launch"></template>
 <title bindquery="app:app" globalize-get>{app}</title>
 
-<article flex alignself="center" bgcolor="white" padding="2rem" screen-xxs="width:[90%]" screen-xl="width:[40rem]"
-  height="100%" color="black" boxshadow="1px 1px 100px 20px black">
+<article data-src="assets/json/software.json" bindquery="app:app" data-filteritem="name:'{app}'" flex alignself="center"
+  bgcolor="white" padding="2rem" screen-xxs="width:[90%]" screen-xl="width:[40rem]" height="100%" color="black"
+  boxshadow="1px 1px 100px 20px black">
   <section flex flexdirection="column" alignitems="center" justifycontent="center" height="100%" width="100%" relative>
     <div screen-xxs="flexdirection:[column]" screen-sm="flexdirection:[column]" screen-md="flexdirection:[column]"
       screen-xl="flexdirection:[row]" flex>
       <section flex flexdirection="column" id="register" storage="api" align="center">
-        <img width="128" height="128" margin="0 auto" marginbottom="1rem"
-          src="https://note.aleptra.com/assets/img/icon.svg">
+        <img width="128" height="128" margin="0 auto" marginbottom="1rem" data-get="icon:icon"
+          data-ongetload="setsrc:[{icon}]">
 
-        <h1 globalize-get bindquery="app:app" color="#4b0082">{app}</h1>
-        <h6 margintop="1rem" marginbottom="2rem" globalize-get>Note is a applikation for taking notes and
-          collaborating with others free-form.</h6>
+        <h1 globalize-get data-set="color:color" color="{color}" bold data-get="name"></h1>
+        <h6 margintop="1rem" marginbottom="2rem" data-get="description" globalize-get></h6>
 
         <form method="get" alignitems="center" color="black" bindasset="endpoint:api.persons_collection.endpoint"
           action="https://note.aleptra.com" data-onsuccess="hide:#register;show:#complete" data-onerror="show:#error">
 
           <a href="https://note.aleptra.com" margintop="1rem" minheight="2.7rem" radius="1rem"
             padding="0.5rem 1.4rem 0.5rem 1.4rem" minheight="2.7rem" border="1px solid silver" bgcolor="black"
-            mouseover="bgcolor:[indigo]" mouseout="bgcolor:[black]" color="white" class="button" globalize-get>Launch
-            application</a>
+            data-set="color:color" mouseover="bgcolor:[{color}]" mouseout="bgcolor:[black]" color="white" class="button"
+            globalize-get>Launch application</a>
 
           <div id="error" bgcolor="red" color="yellow" margintop="1rem" marginbottom="2rem" padding="1rem" hide>
             Something went wrong. Please try again.</div>
@@ -29,10 +29,10 @@
           <hr margintop="2rem" width="100%" bgcolor="silver">
 
           <div color="black" margintop="1rem" alignself="center" gap="0.75rem">
-            <a href="account/recover" globalize-get bindglobal="href:href" mouseover="color:[indigo]"
-              mouseout="color:[inherit]">Forgot account?</a>
-            <a href="account/create" globalize-get bindglobal="href:href" mouseover="color:[indigo]"
-              mouseout="color:[inherit]">Create an account</a>
+            <a href="account/recover" globalize-get bindglobal="href:href" data-set="color:color"
+              mouseover="color:[{color}]" mouseout="color:[inherit]">Forgot account?</a>
+            <a href="account/create" globalize-get bindglobal="href:href" data-set="color:color"
+              mouseover="color:[{color}]" mouseout="color:[inherit]">Create an account</a>
           </div>
         </form>
 
