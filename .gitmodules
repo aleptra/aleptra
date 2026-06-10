@@ -1,0 +1,3 @@
+[submodule "cloud/note"]
+	path = cloud/note
+	url = git@github.com:aleptra/aleptra-note.git
