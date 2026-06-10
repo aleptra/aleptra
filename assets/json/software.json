@@ -11,8 +11,18 @@
     "color": "indianred"
   },
   {
-    "name": "Storage",
+    "name": "Save",
     "icon": "/assets/icons/storage.svg",
     "color": "orange"
+  },
+  {
+    "name": "Check",
+    "icon": "",
+    "color": ""
+  },
+  {
+    "name": "Track",
+    "icon": "",
+    "color": ""
   }
 ]
