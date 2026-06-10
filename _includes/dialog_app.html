@@ -12,7 +12,9 @@
   <div id="empty" hide>No applications found.</div>
   <button click="overlay-close:#dialog" bgcolor="initial" color="white" radius="50%" height="3rem" width="3rem"
     top="1rem" right="0.5rem" fontsize="30px" absolute bold aria-label="close">×</button>
-  <section id="apps" height="100%" flex grid="1fr 1fr" style="grid-template-columns: 1fr 1fr 1fr 1fr 1fr"
+  <section id="apps" height="100%" grid screen-xxs="gridcolumns:[1fr 1fr 1fr]" screen-xs="gridcolumns:[1fr 1fr 1fr 1fr]"
+    screen-sm="gridcolumns:[1fr 1fr 1fr 1fr]" screen-md="gridcolumns:[1fr 1fr 1fr 1fr 1fr]"
+    screen-lg="gridcolumns:[1fr 1fr 1fr 1fr 1fr]" screen-xl="gridcolumns:[1fr 1fr 1fr 1fr 1fr 1fr]"
     data-src="assets/json/software.json" filtersearch--onempty="#empty" data-iterate="true">
     <figure filtersearch--select>
       <a data-set="name:name" href="cloud/?app={name}" flexdirection="column" align="center" fontsize="15px"><img

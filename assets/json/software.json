@@ -3,31 +3,37 @@
     "name": "Note",
     "icon": "https://note.aleptra.com/assets/img/icon.svg",
     "color": "indigo",
-    "description": "Note is an application for taking notes and collaborating with others free-form."
+    "description": "Note is an application for taking notes and collaborating with others free-form.",
+    "enabled": true
   },
   {
     "name": "Draw",
     "icon": "/assets/icons/draw.svg",
-    "color": "indianred"
+    "color": "indianred",
+    "enabled": false
   },
   {
     "name": "Save",
     "icon": "/assets/icons/storage.svg",
-    "color": "orange"
+    "color": "orange",
+    "enabled": false
   },
   {
     "name": "Check",
     "icon": "/assets/icons/check.svg",
-    "color": "forestgreen"
+    "color": "forestgreen",
+    "enabled": false
   },
   {
     "name": "Chat",
     "icon": "/assets/icons/chat.svg",
-    "color": ""
+    "color": "",
+    "enabled": false
   },
   {
     "name": "Track",
-    "icon": "",
-    "color": ""
+    "icon": "/assets/icons/track.svg",
+    "color": "",
+    "enabled": false
   }
 ]
