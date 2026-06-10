@@ -5,120 +5,122 @@
 <div wave--load wave--conf="src:assets/img/clouds-orginal.jpg;slices:40;speed:0.01;amount:6" height="100%" width="100%"
   absolute>
 </div>
-<article alignself="center" bgcolor="white" screen-xxs="width:[90%]" screen-md="width:[75%]" screen-xl="width:[80%]"
-  screen-xxl="width:[60rem]" screen-xxxl="width:[65rem]" screen-wide="width:[70rem]" height="100%" paddingtop="3rem">
-  <section height="100%" width="100%" paddingbottom="2rem" bgcolor="rgba(0,0,0, .1)" relative>
-    <div screen-xxs="flexdirection:[column]" screen-sm="flexdirection:[column]" screen-md="flexdirection:[column]"
-      screen-xl="flexdirection:[row]" margin="0 auto" flex height="100%" justifycontent="center" align="center"
-      alignitems="center" relative>
+<article alignself="center" bgcolor="white" screen-xxs="width:[90%]" screen-md="width:[85%]" screen-xl="width:[80%]"
+  screen-xxl="width:[60rem]" screen-xxxl="width:[65rem]" screen-wide="width:[70rem]" minheight="100%" paddingtop="3rem">
 
-      <section id="register" storage="api">
-        <h1 globalize-get>Create your account</h1>
-        <h6 margintop="1rem" marginbottom="2rem" globalize-get>Create an account for personal use</h6>
-        <div marginbottom="2rem">
-          <span radius="1rem 0rem 0rem 1rem" lineheight="2.2" border="1px solid silver" color="black" width="25%"
-            class="button" bgcolor="gold">Personal</span><span radius="0rem 1rem 1rem 0rem" lineheight="2.2"
-            border="1px solid silver" borderleft="0" bgcolor="rgba(0,0,0, .5)" color="silver" width="25%" class="button"
-            click="alert:[demo]">Organization</span>
+  <div minheight="inherit" width="100%" paddingbottom="2rem" bgcolor="rgba(0,0,0, .1)" relative
+    screen-xxs="flexdirection:[column]" screen-sm="flexdirection:[column]" screen-md="flexdirection:[column]"
+    screen-xl="flexdirection:[row]" margin="0 auto" flex justifycontent="center" align="center" alignitems="center"
+    relative>
+
+    <section id="register" storage="api">
+      <h1 globalize-get>Create your account</h1>
+      <h6 margintop="1rem" marginbottom="2rem" globalize-get>Create an account for personal use</h6>
+      <div marginbottom="2rem">
+        <span radius="1rem 0rem 0rem 1rem" padding="0 1.5rem" lineheight="2.2" border="1px solid silver" color="black"
+          class="button" bgcolor="gold" minwidth="8.5rem">Personal</span><span radius="0rem 1rem 1rem 0rem"
+          padding="0 1.5rem" lineheight="2.2" border="1px solid silver" borderleft="0" bgcolor="rgba(0,0,0, .5)"
+          color="silver" minwidth="8.5rem" class="button" click="alert:[demo]">Organization</span>
+      </div>
+
+      <form method="post" color="black" bindasset="endpoint:api.persons_collection.endpoint" action="{endpoint}"
+        data-onsuccess="hide:#register;show:#complete" data-onerror="show:#error">
+
+        <div gap="5" screen-xxs="flexdirection:[column]" screen-lg="flexdirection:[row]">
+          <div flexdirection="column">
+            <input flex="1" name="first_name" bgcolor="whitesmoke" type="text" padding="0.75rem" radius="2px"
+              class="phdark" placeholder="First Name" globalize-get
+              form-invalid="#first_name_tip:[Please enter your first name]" required><small id="first_name_tip"
+              color="red"></small>
+          </div>
+          <div flexdirection="column">
+            <input flex="1" name="middle_name" bgcolor="whitesmoke" type="text" padding="0.75rem" radius="2px"
+              class="phdark" placeholder="Middle Name" globalize-get><small> .</small>
+          </div>
+          <div flexdirection="column">
+            <input flex="1" name="last_name" bgcolor="whitesmoke" type="text" padding="0.75rem" radius="2px"
+              class="phdark" placeholder="Last Name" globalize-get
+              form-invalid="#last_name_tip:[Please enter your last name]" required><small id="last_name_tip"
+              color="red"></small>
+          </div>
         </div>
 
-        <form method="post" color="black" bindasset="endpoint:api.persons_collection.endpoint" action="{endpoint}"
-          data-onsuccess="hide:#register;show:#complete" data-onerror="show:#error">
+        <div flexdirection="column" marginbottom="1rem">
+          <input flex="1" name="email" bgcolor="whitesmoke" type="text" padding="0.75rem" radius="2px" class="phdark"
+            placeholder="Email" globalize-get form-invalid="#email_tip:[Please enter your email]" required>
+          <small id="email_tip" color="red"></small>
+        </div>
 
-          <div gap="5" screen-xxs="flexdirection:[column]" screen-lg="flexdirection:[row]">
-            <div flexdirection="column">
-              <input flex="1" name="first_name" bgcolor="whitesmoke" type="text" padding="0.75rem" radius="2px"
-                class="phdark" placeholder="First Name" globalize-get
-                form-invalid="#first_name_tip:[Please enter your first name]" required><small id="first_name_tip"
-                color="red"></small>
-            </div>
-            <div flexdirection="column">
-              <input flex="1" name="middle_name" bgcolor="whitesmoke" type="text" padding="0.75rem" radius="2px"
-                class="phdark" placeholder="Middle Name" globalize-get><small> .</small>
-            </div>
-            <div flexdirection="column">
-              <input flex="1" name="last_name" bgcolor="whitesmoke" type="text" padding="0.75rem" radius="2px"
-                class="phdark" placeholder="Last Name" globalize-get
-                form-invalid="#last_name_tip:[Please enter your last name]" required><small id="last_name_tip"
-                color="red"></small>
-            </div>
+        <div marginbottom="1rem" flex flexdirection="row" gap="5">
+          <div flex="1">
+            <input flex="1" name="password1" bgcolor="whitesmoke" type="password" padding="0.75rem" radius="2px"
+              class="phdark" placeholder="Password" globalize-get form-invalid="#password1:[Please enter a password]"
+              required>
+            <small id="password1" color="red"></small>
           </div>
-
-          <div flexdirection="column" marginbottom="1rem">
-            <input flex="1" name="email" bgcolor="whitesmoke" type="text" padding="0.75rem" radius="2px" class="phdark"
-              placeholder="Email" globalize-get form-invalid="#email_tip:[Please enter your email]" required>
-            <small id="email_tip" color="red"></small>
+          <div flex="1">
+            <input flex="1" name="password2" bgcolor="whitesmoke" type="password" padding="0.75rem" radius="2px"
+              class="phdark" placeholder="Confirm Password" globalize-get
+              form-invalid="#password2:[Please enter a password]" required>
+            <small id="password2" color="red"></small>
           </div>
+        </div>
 
-          <div marginbottom="1rem" flex flexdirection="row" gap="5">
-            <div flex="1">
-              <input flex="1" name="password1" bgcolor="whitesmoke" type="password" padding="0.75rem" radius="2px"
-                class="phdark" placeholder="Password" globalize-get form-invalid="#password1:[Please enter a password]"
-                required>
-              <small id="password1" color="red"></small>
-            </div>
-            <div flex="1">
-              <input flex="1" name="password2" bgcolor="whitesmoke" type="password" padding="0.75rem" radius="2px"
-                class="phdark" placeholder="Confirm Password" globalize-get
-                form-invalid="#password2:[Please enter a password]" required>
-              <small id="password2" color="red"></small>
-            </div>
-          </div>
+        <i globalize-get color="white">Date of birth</i>
+        <div gap="5" marginbottom="1rem">
+          <select height="unset" flex="1" padding="0.75rem" radius="2px" name="birth_date_year" iterate="1900;2025;i"
+            form-invalid="#birth_year_tip:[Please select your birth year]" required>
+            <option value="" iterate-skip>YYYY</option>
+            <option>{i}</option>
+          </select>
+          <small id="birth_year_tip" color="red"></small>
+          <select height="unset" flex="1" bgcolor="whitesmoke" padding="0.75rem" radius="2px" name="birth_date_month"
+            iterate="01;12;i" form-invalid="#birth_month_tip:[Please select your birth month]" required>
+            <option value="" iterate-skip>MM</option>
+            <option>{i}</option>
+          </select>
+          <small id="birth_month_tip" color="red"></small>
+          <select height="unset" flex="1" bgcolor="whitesmoke" padding="0.75rem" radius="2px" name="birth_date_day"
+            iterate="01;31;i" form-invalid="#birth_day_tip:[Please select your birth day]" required>
+            <option value="" iterate-skip>DD</option>
+            <option>{i}</option>
+          </select>
+          <small id="birth_day_tip" color="red"></small>
+        </div>
 
-          <i globalize-get color="white">Date of birth</i>
-          <div gap="5" marginbottom="1rem">
-            <select flex="1" padding="0.75rem" radius="2px" name="birth_date_year" iterate="1900;2025;i"
-              form-invalid="#birth_year_tip:[Please select your birth year]" required>
-              <option value="" iterate-skip>YYYY</option>
-              <option>{i}</option>
-            </select>
-            <small id="birth_year_tip" color="red"></small>
-            <select flex="1" bgcolor="whitesmoke" padding="0.75rem" radius="2px" name="birth_date_month"
-              iterate="01;12;i" form-invalid="#birth_month_tip:[Please select your birth month]" required>
-              <option value="" iterate-skip>MM</option>
-              <option>{i}</option>
-            </select>
-            <small id="birth_month_tip" color="red"></small>
-            <select flex="1" bgcolor="whitesmoke" padding="0.75rem" radius="2px" name="birth_date_day"
-              iterate="01;31;i" form-invalid="#birth_day_tip:[Please select your birth day]" required>
-              <option value="" iterate-skip>DD</option>
-              <option>{i}</option>
-            </select>
-            <small id="birth_day_tip" color="red"></small>
-          </div>
+        <i globalize-get color="white">Country of residence</i>
+        <div flexdirection="column">
+          <select height="unset" padding="0.75rem" radius="2px" flex="1" id="residence_country" name="residence_country"
+            bindasset="endpoint:api.countries.endpoint"
+            data-src="https://api.aleptra.com/geography/?table=geography_country&order=country->>eng"
+            data-iterate="true" form-invalid="#residence_country_tip:[Please select your country of residence]"
+            required>
+            <option value="" data-iterate-skip>-</option>
+            <option data-set="id:id" value="{id}" data-get="country.eng"></option>
+          </select>
+          <small id="residence_country_tip" color="red"></small>
+        </div>
 
-          <i globalize-get color="white">Country of residence</i>
-          <div flexdirection="column">
-            <select flex="1" id="residence_country" name="residence_country" bindasset="endpoint:api.countries.endpoint"
-              data-src="https://api.aleptra.com/geography/?table=geography_country&order=country->>eng"
-              data-iterate="true"
-              form-invalid="#residence_country_tip:[Please select your country of residence]" required>
-              <option value="" data-iterate-skip>-</option>
-              <option data-set="id:id" value="{id}" data-get="country.eng"></option>
-            </select>
-            <small id="residence_country_tip" color="red"></small>
-          </div>
+        <hr margintop="2rem" width="100%" bgcolor="rgba(0,0,0, .2)">
 
-          <hr bgcolor="rgba(0,0,0, .2)">
+        <div alignself="center" color="white">
+          <input name="participate" type="checkbox" value="1" class="mr05" checked>
+          <span inline>I agree to the <a href="#" color="lightyellow">Terms & Conditions</a></span>
+        </div>
 
-          <div alignself="center" color="white">
-            <input name="participate" type="checkbox" value="1" class="mr05" checked>
-            <span inline>I agree to the <a href="#" color="lightyellow">Terms & Conditions</a></span>
-          </div>
+        <div id="error" bgcolor="red" color="yellow" margintop="1rem" marginbottom="2rem" padding="1rem" hide>
+          Something went wrong. Please try again.</div>
+        <div alignself="center">
+          <input margintop="1rem" radius="1rem" padding="0.5rem 1.4rem 0.5rem 1.4rem" minheight="2.7rem"
+            border="1px solid white" bgcolor="rgba(0,0,0, .6)" mouseover="bgcolor:[black]"
+            mouseout="bgcolor:[rgba(0,0,0, .6)]" border="1px solid white" color="white" class="button" type="submit"
+            value="Create account" globalize-get>
+        </div>
 
-          <div id="error" bgcolor="red" color="yellow" margintop="1rem" marginbottom="2rem" padding="1rem" hide>
-            Something went wrong. Please try again.</div>
-          <div alignself="center">
-            <input margintop="1rem" radius="1rem" padding="0.5rem 1.4rem 0.5rem 1.4rem" minheight="2.7rem"
-              border="1px solid white" bgcolor="rgba(0,0,0, .6)" mouseover="bgcolor:[black]"
-              mouseout="bgcolor:[rgba(0,0,0, .6)]" border="1px solid white" color="white" class="button" type="submit"
-              value="Create account" globalize-get>
-          </div>
+      </form>
 
-        </form>
 
-      </section>
-    </div>
+  </div>
   </section>
 
   <section id="complete" class="pauto tac" hide>
