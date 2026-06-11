@@ -21,7 +21,8 @@
           <a href="https://note.aleptra.com" margintop="1rem" minheight="2.7rem" radius="1rem"
             padding="0.5rem 1.4rem 0.5rem 1.4rem" minheight="2.7rem" border="1px solid silver" bgcolor="black"
             data-set="color:color" mouseover="bgcolor:[{color}]" mouseout="bgcolor:[black]" color="white" class="button"
-            globalize-get data-get="enabled:enabled" if="([{enabled}]:[true])/show?hide">Launch application</a>
+            globalize-get data-get="enabled:enabled" if="([{enabled}]:[true])/show?hide;show:#disabled">Launch application</a>
+            <span id="disabled" bold hide>Not available</div>
 
           <div id="error" bgcolor="red" color="yellow" margintop="1rem" marginbottom="2rem" padding="1rem" hide>
             Something went wrong. Please try again.</div>
