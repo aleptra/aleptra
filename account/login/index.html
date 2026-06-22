@@ -16,8 +16,9 @@
         <img margin="0 auto" marginbottom="1rem" height="8%" maxwidth="unset" src="assets/img/logo.svg">
 
         <form method="post" alignitems="center" color="black" bindasset="endpoint://api.aleptra.com/auth/login"
-          action="{endpoint}" data-onbeforesuccess="data-set:[token:token]" data-onaftersuccess="alert:[{token}]"
-          data-onsuccess="hide:#register;show:#complete" data-onerror="show:#error">
+          action="{endpoint}" data-onbeforesuccess="data-set:[token:token]"
+          data-onaftersuccess="storage-localset:[auth]:[{token}]" data-onsuccess="hide:#register;show:#complete"
+          data-onerror="show:#error">
 
           <div flex flexdirection="column" boxshadow="1px 1px 10px black" bgcolor="rgba(0,0,0, .5)" width="65%"
             radius="0.5rem" padding="1rem">
