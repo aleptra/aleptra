@@ -1,47 +1,243 @@
 <template>
-  <header class="topbar h4_5 pr1 shade1">
-    <button click="toggle" clicktargetfield="aside[0]" class="md_du ml1 p05 br50 hover-"><i
-        class="icon24">≡</i></button>
-    <figure margin="0">
+  <header class="topbar shade1" height="4rem" padding="0 1rem 0 1.5rem">
+    <button click="toggle" clicktargetfield="aside[0]" class="md_du ml1 p05 br50 hover-">
+      <i class="icon24">≡</i>
+    </button>
+    <figure margin="0" flex="1" width="100%" gap="2rem">
       <a href="./home.html" key="0">
         <img height="40%" maxwidth="unset" src="assets/img/logo.svg">
-        <p class="black06 fs10">ESMS</p>
       </a>
-    </figure>
 
-    <a click="storage-localremove:[auth]" href="./" class="fs90 fr" key="4"><i class="icon24 pr05">⍈</i><span
-        class="md_dn">Logga ut</span></a>
+      <input flex="1" click="overlay-dialog:#dialog" bgcolor="transparent" borderleft="0" borderright="0"
+        placeholder="Search for Applications, Systems or Platforms ..." bordertop="0" borderbottom="1px solid white"
+        color="silver" height="2rem" width="100%" value="">
+    </figure>
+    <details class="pr fr">
+      <summary class="button p05 br50 hover-"><i class="icon24">⚙</i></summary>
+      <div bgcolor="white" color="black" class="pa r0 bs1 br05 zi50" padding="0.5rem" minwidth="12rem">
+        <a href="profile.html" class="p05 db hover-" globalize-get>Profile</a>
+        <a href="organization.html" class="p05 db hover-" globalize-get>Organization</a>
+        <a href="billing.html" class="p05 db hover-" globalize-get>Billing</a>
+        <a href="preferences.html" class="p05 db hover-" globalize-get>Preferences</a>
+        <a href="integrations.html" class="p05 db hover-" globalize-get>Integrations</a>
+        <a href="taxonomy.html" class="p05 db hover-" globalize-get>Taxonomy</a>
+        <a href="glossary.html" class="p05 db hover-" globalize-get>Glossary</a>
+        <hr class="bcblack01">
+        <a href="permissions.html" class="p05 db hover-" globalize-get>Permissions</a>
+        <a href="access-logs.html" class="p05 db hover-" globalize-get>Access logs</a>
+        <a href="sessions.html" class="p05 db hover-" globalize-get>Sessions</a>
+        <a href="api-keys.html" class="p05 db hover-" globalize-get>API Keys</a>
+        <a href="policies.html" class="p05 db hover-" globalize-get>Policies</a>
+        <hr class="bcblack01">
+        <a click="storage-localremove:[auth]" href="./" class="p05 db hover- red" globalize-get>Logout</a>
+      </div>
+    </details>
   </header>
+
   <aside class="w15 shade2 md_dn">
     <nav class="sidebar">
       <form form-filter="true">
         <div class="md_du">
           <a click="toggle" keyboard-key="m" keyboard-action="click" keyboard-scope="body" clicktargetfield="aside[0]"
-            class="button pl1"><i class="icon32">&#171;</i></a>
+            class="button pl1">
+            <i class="icon32">&#171;</i>
+          </a>
           <hr>
           <input id="query2" class="bs1 p1 h3 bcblack w100" bindvar="link" type="text"
             placeholder="Search for {link} ..." autocomplete="off">
         </div>
+
         <select name="language" class="p1 h3 mb1 shade1 fs08" onvaluechange="globalize-set">
           <option selected disabled globalize-get>Change language</option>
           <option value="sv">Svenska</option>
           <option value="en">English (US)</option>
           <option value="syc">ܐܪܡܝܐ</option>
         </select>
+
+        <a href="overview.html" class="fwb pl1 p05" globalize-get>Overview</a>
+
         <details open>
-          <summary class="fwb" globalize-get>Manage</summary>
-          <a href="humans.html" title="Anthropology" globalize-get>Humans</a>
-          <a href="animals.html" title="Zoology" globalize-get>Animals</a>
-          <a href="deities.html" title="Theology" globalize-get>Deities</a>
-          <a href="spirits.html" title="Spirituality" globalize-get>Spirits</a>
-          <a href="monsters.html" title="Cryptozoology" globalize-get>Monsters</a>
-          <a href="microbes.html" title="Microbiology" globalize-get>Microbes</a>
-          <a href="plants.html" title="Plants" globalize-get>Plants</a>
-          <a href="aliens.html" title="Astrobiology" globalize-get>Aliens</a>
+          <summary class="fwb" globalize-get>Resources</summary>
+          <a href="assets.html" globalize-get>Assets</a>
+          <a href="inventory.html" globalize-get>Inventory</a>
+          <a href="licenses.html" globalize-get>Licenses</a>
+          <a href="subscriptions.html" globalize-get>Subscriptions</a>
+          <a href="services.html" globalize-get>Services</a>
+          <a href="documents.html" globalize-get>Documents</a>
         </details>
+
+        <details>
+          <summary class="fwb" globalize-get>Operations</summary>
+          <a href="projects.html" globalize-get>Projects</a>
+          <a href="tasks.html" globalize-get>Tasks</a>
+          <a href="processes.html" globalize-get>Processes</a>
+          <a href="events.html" globalize-get>Events</a>
+          <a href="calendar.html" globalize-get>Calendar</a>
+          <a href="metrics.html" globalize-get>Metrics</a>
+          <a href="reports.html" globalize-get>Reports</a>
+        </details>
+
+        <details>
+          <summary class="fwb" globalize-get>Finance</summary>
+          <a href="invoices.html" globalize-get>Invoices</a>
+          <a href="payments.html" globalize-get>Payments</a>
+          <a href="budgets.html" globalize-get>Budgets</a>
+          <a href="expenses.html" globalize-get>Expenses</a>
+          <a href="payroll.html" globalize-get>Payroll</a>
+          <a href="contracts.html" globalize-get>Contracts</a>
+        </details>
+
+        <details open>
+          <summary class="fwb" globalize-get>HR</summary>
+          <a href="people.html" globalize-get>People</a>
+          <a href="groups.html" globalize-get>Groups</a>
+          <a href="time-tracking.html" globalize-get>Time tracking</a>
+          <a href="leave.html" globalize-get>Leave</a>
+          <a href="performance.html" globalize-get>Performance</a>
+        </details>
+
+        <details>
+          <summary class="fwb" globalize-get>Communication</summary>
+          <a href="messages.html" globalize-get>Messages</a>
+          <a href="notifications.html" globalize-get>Notifications</a>
+          <a href="announcements.html" globalize-get>Announcements</a>
+        </details>
+
+        <details>
+          <summary class="fwb" globalize-get>CRM</summary>
+          <a href="leads.html" globalize-get>Leads</a>
+          <a href="opportunities.html" globalize-get>Opportunities</a>
+          <a href="customers.html" globalize-get>Customers</a>
+          <a href="contacts.html" globalize-get>Contacts</a>
+          <a href="pipeline.html" globalize-get>Pipeline</a>
+          <a href="quotes.html" globalize-get>Quotes</a>
+        </details>
+
+        <details>
+          <summary class="fwb" globalize-get>Procurement</summary>
+          <a href="purchase-orders.html" globalize-get>Purchase orders</a>
+          <a href="vendors.html" globalize-get>Vendors</a>
+          <a href="receiving.html" globalize-get>Receiving</a>
+          <a href="approvals.html" globalize-get>Approvals</a>
+        </details>
+
+        <details>
+          <summary class="fwb" globalize-get>Logistics</summary>
+          <a href="shipping.html" globalize-get>Shipping</a>
+          <a href="warehousing.html" globalize-get>Warehousing</a>
+          <a href="tracking.html" globalize-get>Tracking</a>
+          <a href="delivery.html" globalize-get>Delivery</a>
+        </details>
+
+        <details>
+          <summary class="fwb" globalize-get>Production</summary>
+          <a href="work-orders.html" globalize-get>Work orders</a>
+          <a href="bom.html" globalize-get>Bill of materials</a>
+          <a href="quality.html" globalize-get>Quality control</a>
+        </details>
+
+        <details>
+          <summary class="fwb" globalize-get>Support</summary>
+          <a href="tickets.html" globalize-get>Tickets</a>
+          <a href="sla.html" globalize-get>SLA</a>
+          <a href="knowledge-base.html" globalize-get>Knowledge base</a>
+        </details>
+
+        <details>
+          <summary class="fwb" globalize-get>Marketing</summary>
+          <a href="campaigns.html" globalize-get>Campaigns</a>
+          <a href="content.html" globalize-get>Content</a>
+          <a href="social-media.html" globalize-get>Social media</a>
+          <a href="seo.html" globalize-get>SEO</a>
+          <a href="marketing-analytics.html" globalize-get>Analytics</a>
+        </details>
+
+        <details>
+          <summary class="fwb" globalize-get>E-commerce</summary>
+          <a href="products.html" globalize-get>Products</a>
+          <a href="orders.html" globalize-get>Orders</a>
+          <a href="catalog.html" globalize-get>Catalog</a>
+          <a href="promotions.html" globalize-get>Promotions</a>
+          <a href="returns.html" globalize-get>Returns</a>
+        </details>
+
+        <details>
+          <summary class="fwb" globalize-get>Compliance</summary>
+          <a href="regulations.html" globalize-get>Regulations</a>
+          <a href="audits.html" globalize-get>Audits</a>
+          <a href="certifications.html" globalize-get>Certifications</a>
+          <a href="data-protection.html" globalize-get>Data protection</a>
+        </details>
+
+        <details>
+          <summary class="fwb" globalize-get>Risk</summary>
+          <a href="risk-register.html" globalize-get>Risk register</a>
+          <a href="mitigation.html" globalize-get>Mitigation</a>
+          <a href="insurance.html" globalize-get>Insurance</a>
+          <a href="incidents.html" globalize-get>Incidents</a>
+        </details>
+
+        <details>
+          <summary class="fwb" globalize-get>Training</summary>
+          <a href="courses.html" globalize-get>Courses</a>
+          <a href="certifications-training.html" globalize-get>Certifications</a>
+          <a href="development.html" globalize-get>Development</a>
+        </details>
+
+        <details>
+          <summary class="fwb" globalize-get>Fleet</summary>
+          <a href="vehicles.html" globalize-get>Vehicles</a>
+          <a href="maintenance.html" globalize-get>Maintenance</a>
+          <a href="fuel.html" globalize-get>Fuel</a>
+          <a href="drivers.html" globalize-get>Drivers</a>
+        </details>
+
+        <details>
+          <summary class="fwb" globalize-get>Facilities</summary>
+          <a href="locations.html" globalize-get>Locations</a>
+          <a href="spaces.html" globalize-get>Spaces</a>
+          <a href="leases.html" globalize-get>Leases</a>
+          <a href="facility-maintenance.html" globalize-get>Maintenance</a>
+          <a href="bookings.html" globalize-get>Bookings</a>
+        </details>
+
+        <details>
+          <summary class="fwb" globalize-get>Analytics</summary>
+          <a href="dashboards.html" globalize-get>Dashboards</a>
+          <a href="custom-reports.html" globalize-get>Custom reports</a>
+          <a href="data-explorer.html" globalize-get>Data explorer</a>
+        </details>
+
+        <details>
+          <summary class="fwb" globalize-get>R&D</summary>
+          <a href="research.html" globalize-get>Research</a>
+          <a href="patents.html" globalize-get>Patents</a>
+          <a href="innovation.html" globalize-get>Innovation</a>
+          <a href="prototypes.html" globalize-get>Prototypes</a>
+        </details>
+
+        <details>
+          <summary class="fwb" globalize-get>Sustainability</summary>
+          <a href="carbon-tracking.html" globalize-get>Carbon tracking</a>
+          <a href="esg-reporting.html" globalize-get>ESG reporting</a>
+          <a href="waste-management.html" globalize-get>Waste management</a>
+          <a href="energy-usage.html" globalize-get>Energy usage</a>
+        </details>
+
+        <details>
+          <summary class="fwb" globalize-get>Fundraising</summary>
+          <a href="donations.html" globalize-get>Donations</a>
+          <a href="donors.html" globalize-get>Donors</a>
+          <a href="grants.html" globalize-get>Grants</a>
+          <a href="fundraising-campaigns.html" globalize-get>Campaigns</a>
+        </details>
+
+
+
       </form>
     </nav>
   </aside>
+
   <main inherit="false" bgcolor="#f7f7f7" color="black" padding="2rem"></main>
   <aside class="testar"></aside>
   <footer></footer>
