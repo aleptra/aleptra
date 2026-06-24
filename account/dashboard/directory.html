@@ -1,0 +1,56 @@
+<script src="https://cdn.front.nu/nightly/front.js"></script>
+<template srcdoc="../../../index" src="../../../_templates/main"></template>
+<title>Directory</title>
+
+<div class="df aic">
+  <h1 class="f1" globalize-get>Directory</h1>
+  <button class="button round br50 w2r h2r fr bcblack white aic bs1"><i class="icon16">&#8854;</i></button>
+</div>
+<hr class="bcblack01 mt1">
+
+<div class="df mb05 gap1- aic">
+  <input id="query" type="text" class="bs1 f3 p1 h3 br05" placeholder="Search members..." placeholdercolor="silver"
+    autocomplete="off">
+  <select id="sort" class="bs1 f0 p1 h3 br05 fs08">
+    <option value="" selected disabled globalize-get>Sort by</option>
+    <option value="title" globalize-get>Title</option>
+    <option value="department" globalize-get>Department</option>
+    <option value="role" globalize-get>Role</option>
+    <option value="start_date" globalize-get>Start date</option>
+  </select>
+</div>
+
+<div class="df mb1 gap05- fww">
+  <button class="tag br1 p05 pl1 pr1 fs08 bcblack white" globalize-get>All</button>
+  <button class="tag br1 p05 pl1 pr1 fs08 bcwhitesmoke" globalize-get>Admin</button>
+  <button class="tag br1 p05 pl1 pr1 fs08 bcwhitesmoke" globalize-get>Employee</button>
+  <button class="tag br1 p05 pl1 pr1 fs08 bcwhitesmoke" globalize-get>Member</button>
+  <button class="tag br1 p05 pl1 pr1 fs08 bcwhitesmoke" globalize-get>Owner</button>
+  <button class="tag br1 p05 pl1 pr1 fs08 bcwhitesmoke" globalize-get>Volunteer</button>
+  <button class="tag br1 p05 pl1 pr1 fs08 bcwhitesmoke" globalize-get>Board member</button>
+</div>
+
+<div id="loader" class="loader"></div>
+
+<div id="members" storage-bindlocal="auth" data-src="https://api.aleptra.com/entity/?table=private.organization_member"
+  data-header="Authorization:Bearer {auth}" data-loader="#loader" data-onempty="#empty" data-onerror="show:#error"
+  data-iterate="true">
+  <div class="df aic" flex flexdirection="row" padding="1rem">
+    <a href="member.html?i={id}" class="f1">
+      <p data-get="human_id"></p>
+      <small class="dimgray" data-get="title"></small>
+      <small class="dimgray" data-get="department"></small>
+    </a>
+    <details class="pr" flex="none">
+      <summary class="button p05 br50 hover-"><i class="icon16">⋮</i></summary>
+      <div class="pa r0 bcwhite bs1 br05 zi50" padding="0.5rem" minwidth="10rem">
+        <a href="#" class="p05 db hover-" globalize-get>Edit</a>
+        <a href="#" class="p05 db hover-" globalize-get>Change role</a>
+        <a href="#" class="p05 db hover- red" globalize-get>Remove</a>
+      </div>
+    </details>
+  </div>
+</div>
+
+<p id="empty" hide padding="1rem" color="dimgray">No members found.</p>
+<p id="error" hide padding="1rem" color="red" onshow="hide:#empty;hide:#members">Error loading members.</p>
