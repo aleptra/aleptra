@@ -1,9 +1,10 @@
 <div id="loader" class="loader"></div>
 <div id="list-humans" class="box cards shade1 list br0- bcwhite-" bindvar="src;search:"
-  bindasset="apikey:api.humans.api_key" bindquery="q:q;c:category" bindglobal="l:globalize.code"
+  storage-bindlocal="auth"
+  bindquery="q:q;c:category" bindglobal="l:globalize.code"
   ifbeforeend="{c};data-src:&or=(id.eq.{c},taxonomy.eq.{c})"
   data-src="{src}&select=id,first_name,middle_name,last_name,sex&where=first_name->>{l:eng}.ilike(*{search}*)"
-  data-header="apikey:{apikey};Prefer:count=exact" data-loader="#loader" data-onempty="#empty" data-iterate="true">
+  data-header="Prefer:count=exact" data-loader="#loader" data-onempty="#empty" data-iterate="true">
   <a bindvar="href" data-set="i:id" href="{href}.html?i={i}" class="p1">
     <small class="gray f0" paddingright="0.5rem" data-set="s:sex"
       if="([{s}]:[male])/settext:[&#9794;];color:[blue]?settext:[&#9792;];color:[deeppink]"></small>

@@ -2,5 +2,8 @@
   "origin": "https://api.aleptra.com",
   "auth": {
     "login": "{origin}/auth/login"
+  },
+  "human": {
+    "index": "{origin}/humanology/?table=private.human"
   }
 }
