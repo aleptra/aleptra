@@ -63,7 +63,7 @@
     <figure margin="0">
       <a href="./" key="0" margin="0 0.5rem"><img height="40%" maxwidth="unset" src="assets/img/logo.svg"></a>
     </figure>
-    <div flex="1" width="100%" gap="2rem" screen-xxs="hide" screen-xs="hide" screen-sm="hide" screen-md="show">
+    <div flex="1" width="100%" gap="2rem">
       <div screen-xs="hide" screen-sm="hide" screen-md="hide" screen-lg="show">
         <div zindex="100" bindglobal="href:href" if="([{href}]~[/documentation])/show?hide">
           <form class="zi3" id="form" method="get" action="search.html" target="_top">
@@ -81,7 +81,7 @@
           </div>
           <div id="searchTable" filtersearch--onempty="#searchTableEmpty" data-src="assets/json/data/doc.json"
             data-iterate="true" bgcolor="black" class="box pa w100 ail- autocomplete" border="1px solid #333"
-            data-onempty="#empty2" hide>
+            data-onempty="show:#empty2" hide>
             <figure stop>
               <a style="align-items: normal;" bindglobal="l:globalize.code" data-set="link:link" data-get="title"
                 href="{link}" class="p1" stop="data-set;data-get;href;class" filtersearch--select></a>
@@ -102,11 +102,9 @@
             if="([{href}]~[/marketplace])/underline">
             Platforms</a>
         </span>-->
-
-        <div flex flex="1" width="100%" justifycontent="flex-end" alignitems="center" gap="0.5rem">
-          <a href="account/login" globalize-get bindglobal="href:href" if="([{href}]~[/login])/underline">Login</a>
-          <i class="icon16">⍇</i>
-        </div>
+      </div>
+      <div flex flex="1" width="100%" justifycontent="flex-end" alignitems="center" gap="0.5rem">
+        <a href="account/login" globalize-get bindglobal="href:href" if="([{href}]~[/login])/underline">Login</a>
       </div>
     </div>
   </header>
