@@ -1,0 +1,45 @@
+<dialog id="dialog" keyboard-key="Escape" keyboard-action="overlay-close:#dialog" block bgcolor="rgba(0,0,0, .9)"
+  onoverlay-dialog="start:[*];focus:#search" radius="2rem" margin="0 auto" boxshadow="0px 0px 20px 1px black"
+  border="1px solid dimgray" color="white" padding="2rem"
+  screen-xxs="width:[100%];minheight:[40vh];maxheight:[90vh]"
+  screen-sm="width:[600px];minheight:[50vh];maxheight:[80vh]"
+  screen-md="width:[800px];minheight:[50vh];maxheight:[80vh]"
+  screen-lg="width:[900px];minheight:[60vh];maxheight:[80vh]"
+  overflow="hidden" alignself="center" hide>
+  <form id="productForm">
+  <header flex flexdirection="column">
+    <input id="search" type="text" placeholder="Search for products ..." filtersearch--input
+      onvaluechange="filtersearch--run:#apps"
+      width="100%" borderbottom="1px solid black" bgcolor="initial" color="white" autocomplete="off" autocorrect="false"
+      autospellcheck="false" paddingbottom="1rem" fontsize="20px">
+    <div flex gap="1rem" paddingtop="1rem" paddingbottom="1rem">
+      <fieldset class="button" padding="0.4rem 1rem" radius="1rem" border="1px solid gray" fontsize="13px">
+        <input type="checkbox" id="chk_app" filtersearch--group="Application" click="filtersearch--run:#apps" marginright=".5rem">
+        <label for="chk_app">Applications</label>
+      </fieldset>
+      <fieldset class="button" padding="0.4rem 1rem" radius="1rem" border="1px solid gray" fontsize="13px">
+        <input type="checkbox" id="chk_sys" filtersearch--group="System" click="filtersearch--run:#apps" marginright=".5rem">
+        <label for="chk_sys">Systems</label>
+      </fieldset>
+      <fieldset class="button" padding="0.4rem 1rem" radius="1rem" border="1px solid gray" fontsize="13px">
+        <input type="checkbox" id="chk_plat" filtersearch--group="Platform" click="filtersearch--run:#apps" marginright=".5rem">
+        <label for="chk_plat">Platforms</label>
+      </fieldset>
+    </div>
+    <hr height="1px" bgcolor="gray" width="100%">
+  </header>
+  </form>
+  <div id="empty" hide>No products found. <a click="resetvalue:#productForm;filtersearch--run:#apps;hide:#empty;focus:#search" color="gold" style="cursor:pointer">Clear filter</a></div>
+  <button click="overlay-close:#dialog" bgcolor="initial" color="white" radius="50%" height="3rem" width="3rem"
+    top="1rem" right="0.5rem" fontsize="30px" absolute bold aria-label="close">×</button>
+  <section id="apps" overflow="auto" maxheight="50vh" grid justifycontent="center" alignitems="start" screen-xxs="gridcolumns:[1fr 1fr 1fr]" screen-xs="gridcolumns:[1fr 1fr 1fr 1fr]"
+    screen-sm="gridcolumns:[1fr 1fr 1fr 1fr]" screen-md="gridcolumns:[1fr 1fr 1fr 1fr 1fr]"
+    screen-lg="gridcolumns:[1fr 1fr 1fr 1fr 1fr]" screen-xl="gridcolumns:[1fr 1fr 1fr 1fr 1fr 1fr]"
+    data-src="assets/json/software.json" filtersearch--onempty="#empty" data-iterate="true">
+    <figure flex filtersearch--select justifycontent="center" margin="0" padding="1rem 0">
+      <a data-set="name:name" href="cloud/?app={name}" flexdirection="column" alignitems="center" fontsize="14px"><img
+          data-get="icon" width="4rem" height="4rem"><span data-get="name" margin="5px auto" align="center"></span></a>
+      <span hide filtersearch--marker data-get="type"></span>
+    </figure>
+  </section>
+</dialog>

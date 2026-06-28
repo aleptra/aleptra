@@ -1,6 +1,7 @@
 [
   {
     "name": "Note",
+    "type": "Application",
     "icon": "https://note.aleptra.com/assets/img/icon.svg",
     "color": "indigo",
     "description": "Note is an application for taking notes and collaborating with others free-form.",
@@ -8,32 +9,205 @@
   },
   {
     "name": "Draw",
+    "type": "Application",
     "icon": "/assets/icons/draw.svg",
     "color": "indianred",
     "enabled": false
   },
   {
     "name": "Save",
+    "type": "Application",
     "icon": "/assets/icons/storage.svg",
     "color": "orange",
     "enabled": false
   },
   {
     "name": "Check",
+    "type": "Application",
     "icon": "/assets/icons/check.svg",
     "color": "forestgreen",
     "enabled": false
   },
   {
     "name": "Chat",
+    "type": "Application",
     "icon": "/assets/icons/chat.svg",
-    "color": "",
+    "color": "dodgerblue",
     "enabled": false
   },
   {
     "name": "Track",
+    "type": "Application",
     "icon": "/assets/icons/track.svg",
-    "color": "",
+    "color": "tomato",
+    "enabled": false
+  },
+  {
+    "name": "Mail",
+    "type": "Application",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "crimson",
+    "enabled": false
+  },
+  {
+    "name": "Calendar",
+    "type": "Application",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "royalblue",
+    "enabled": false
+  },
+  {
+    "name": "Files",
+    "type": "Application",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "goldenrod",
+    "enabled": false
+  },
+  {
+    "name": "Meet",
+    "type": "Application",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "seagreen",
+    "enabled": false
+  },
+  {
+    "name": "People",
+    "type": "System",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "steelblue",
+    "enabled": false
+  },
+  {
+    "name": "Finance",
+    "type": "System",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "gold",
+    "enabled": false
+  },
+  {
+    "name": "Sales",
+    "type": "System",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "coral",
+    "enabled": false
+  },
+  {
+    "name": "Operations",
+    "type": "System",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "teal",
+    "enabled": false
+  },
+  {
+    "name": "Procurement",
+    "type": "System",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "sienna",
+    "enabled": false
+  },
+  {
+    "name": "Production",
+    "type": "System",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "olive",
+    "enabled": false
+  },
+  {
+    "name": "Support",
+    "type": "System",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "slateblue",
+    "enabled": false
+  },
+  {
+    "name": "Marketing",
+    "type": "System",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "hotpink",
+    "enabled": false
+  },
+  {
+    "name": "Compliance",
+    "type": "System",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "darkred",
+    "enabled": false
+  },
+  {
+    "name": "Analytics",
+    "type": "System",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "darkcyan",
+    "enabled": false
+  },
+  {
+    "name": "Legal",
+    "type": "System",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "darkslategray",
+    "enabled": false
+  },
+  {
+    "name": "Infrastructure",
+    "type": "System",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "dimgray",
+    "enabled": false
+  },
+  {
+    "name": "Healthcare",
+    "type": "System",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "mediumturquoise",
+    "enabled": false
+  },
+  {
+    "name": "Education",
+    "type": "System",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "mediumpurple",
+    "enabled": false
+  },
+  {
+    "name": "E-commerce",
+    "type": "System",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "darkorange",
+    "enabled": false
+  },
+  {
+    "name": "Sites",
+    "type": "Platform",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "mediumpurple",
+    "enabled": false
+  },
+  {
+    "name": "Cloud",
+    "type": "Platform",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "skyblue",
+    "enabled": false
+  },
+  {
+    "name": "Integrations",
+    "type": "Platform",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "mediumseagreen",
+    "enabled": false
+  },
+  {
+    "name": "API",
+    "type": "Platform",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "slategray",
+    "enabled": false
+  },
+  {
+    "name": "Marketplace",
+    "type": "Platform",
+    "icon": "/assets/icons/placeholder.svg",
+    "color": "peru",
     "enabled": false
   }
 ]

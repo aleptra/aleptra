@@ -1,1 +1,27 @@
-{}
+{
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.stickyScroll.enabled": false,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "git.openDiffOnClick": false,
+  "liveServer.settings.port": 5555,
+  "search.exclude": {
+    "**/*.log": true,
+    "**/*.min.js": true,
+    "**/node_modules": true,
+    "**/.git": true,
+    "**/build": true,
+    "**/coverage": true,
+    "**/dist": true
+  }
+}
