@@ -3,196 +3,219 @@
 <template srcdoc="../index" src="../_templates/default"></template>
 
 <article>
+  <section height="unset" width="100%" paddingtop="4rem" paddingbottom="4rem" bgcolor="black" align="center">
+    <h1 screen-xxs="fontsize:[170%]" screen-md="fontsize:[220%]" bold>Pricing</h1>
+    <h5 color="silver" margintop="1rem" lineheight="1.6">Simple, transparent pricing for everyone.</h5>
+    <div margintop="2rem">
+      <span id="tab-personal" radius="1rem 0rem 0rem 1rem" padding="0 1.5rem" lineheight="2.2" border="1px solid silver"
+        class="button" bgcolor="gold" color="black" minwidth="8.5rem"
+        click="show:#pricing-personal;hide:#pricing-organization;bgcolor:[gold]:#tab-personal;color:[black]:#tab-personal;bgcolor:[rgba(0,0,0,.5)]:#tab-organization;color:[silver]:#tab-organization">Personal</span><span
+        id="tab-organization" radius="0rem 1rem 1rem 0rem" padding="0 1.5rem" lineheight="2.2" border="1px solid silver"
+        borderleft="0" bgcolor="rgba(0,0,0, .5)" color="silver" minwidth="8.5rem" class="button"
+        click="show:#pricing-organization;hide:#pricing-personal;bgcolor:[gold]:#tab-organization;color:[black]:#tab-organization;bgcolor:[rgba(0,0,0,.5)]:#tab-personal;color:[silver]:#tab-personal">Organization</span>
+    </div>
+  </section>
 
-      <section height="unset" width="100%" paddingtop="4rem" paddingbottom="4rem" bgcolor="black" align="center">
-        <h1 screen-xxs="fontsize:[170%]" screen-md="fontsize:[220%]" bold>Pricing</h1>
-        <h5 color="silver" margintop="1rem" lineheight="1.6">Simple, transparent pricing for everyone.</h5>
-        <div margintop="2rem">
-          <span id="tab-personal" radius="1rem 0rem 0rem 1rem" padding="0 1.5rem" lineheight="2.2" border="1px solid silver"
-            class="button" bgcolor="gold" color="black" minwidth="8.5rem"
-            click="show:#pricing-personal;hide:#pricing-organization;bgcolor:[gold]:#tab-personal;color:[black]:#tab-personal;bgcolor:[rgba(0,0,0,.5)]:#tab-organization;color:[silver]:#tab-organization">Personal</span><span
-            id="tab-organization" radius="0rem 1rem 1rem 0rem" padding="0 1.5rem" lineheight="2.2"
-            border="1px solid silver" borderleft="0" bgcolor="rgba(0,0,0, .5)" color="silver" minwidth="8.5rem"
-            class="button"
-            click="show:#pricing-organization;hide:#pricing-personal;bgcolor:[gold]:#tab-organization;color:[black]:#tab-organization;bgcolor:[rgba(0,0,0,.5)]:#tab-personal;color:[silver]:#tab-personal">Organization</span>
+  <!-- Personal Pricing -->
+  <section id="pricing-personal" height="unset" bgcolor="whitesmoke" color="black" paddingtop="4rem"
+    paddingbottom="5rem">
+    <div screen-xxs="width:[90%];gridcolumns:[1fr]" screen-sm="width:[90%];gridcolumns:[1fr]"
+      screen-md="width:[85%];gridcolumns:[1fr 1fr]" screen-xl="width:[75%];gridcolumns:[1fr 1fr 1fr]"
+      screen-xxl="width:[65rem];gridcolumns:[1fr 1fr 1fr]" screen-wide="width:[75rem];gridcolumns:[1fr 1fr 1fr]"
+      margin="0 auto" grid gap="2rem" alignitems="start">
+
+      <!-- Free -->
+      <div flex flexdirection="column" bgcolor="white" radius="1rem" padding="2rem" border="1px solid #ddd"
+        height="100%">
+        <h5 bold>Free</h5>
+        <div margintop="1rem">
+          <span fontsize="250%" bold>$0</span>
+          <span color="#666"> / month</span>
         </div>
-      </section>
+        <p margintop="1rem" color="#555" lineheight="1.5">For individuals exploring cloud management.</p>
+        <a href="account/create" margintop="1.5rem" padding="0.6rem 1.4rem" radius="0.5rem" border="1px solid black"
+          align="center" bgcolor="white" color="black" mouseover="bgcolor:[#f0f0f0]" mouseout="bgcolor:[white]">Get
+          started</a>
+        <ul margintop="1.5rem" color="#444">
+          <li>1 GB cloud space</li>
+          <li>Basic visibility dashboard</li>
+          <li>Community support</li>
+          <li>7-day data retention</li>
+          <li>Single user</li>
+        </ul>
+      </div>
 
-      <!-- Personal Pricing -->
-      <section id="pricing-personal" height="unset" bgcolor="whitesmoke" color="black" paddingtop="4rem" paddingbottom="5rem">
-        <div screen-xxs="width:[90%];gridcolumns:[1fr]" screen-sm="width:[90%];gridcolumns:[1fr]" screen-md="width:[85%];gridcolumns:[1fr 1fr]" screen-xl="width:[75%];gridcolumns:[1fr 1fr 1fr]" screen-xxl="width:[65rem];gridcolumns:[1fr 1fr 1fr]" screen-wide="width:[75rem];gridcolumns:[1fr 1fr 1fr]" margin="0 auto"
-          grid gap="2rem" alignitems="start">
-
-          <!-- Free -->
-          <div flex flexdirection="column" bgcolor="white" radius="1rem" padding="2rem" border="1px solid #ddd" height="100%">
-            <h5 bold>Free</h5>
-            <div margintop="1rem">
-              <span fontsize="250%" bold>$0</span>
-              <span color="#666"> / month</span>
-            </div>
-            <p margintop="1rem" color="#555" lineheight="1.5">For individuals exploring cloud management.</p>
-            <a href="account/create" margintop="1.5rem" padding="0.6rem 1.4rem" radius="0.5rem" border="1px solid black" align="center" bgcolor="white" color="black" mouseover="bgcolor:[#f0f0f0]" mouseout="bgcolor:[white]">Get started</a>
-            <ul margintop="1.5rem" color="#444">
-              <li>1 GB cloud space</li>
-              <li>Basic visibility dashboard</li>
-              <li>Community support</li>
-              <li>7-day data retention</li>
-              <li>Single user</li>
-            </ul>
-          </div>
-
-          <!-- Plus -->
-          <div flex flexdirection="column" bgcolor="white" radius="1rem" padding="2rem" border="2px solid black" height="100%" relative>
-            <span absolute top="-0.75rem" left="50%" transform="translateX(-50%)" bgcolor="black" color="white" padding="0.2rem 1rem" radius="1rem" fontsize="12px" bold>Most popular</span>
-            <h5 bold>Plus</h5>
-            <div margintop="1rem">
-              <span fontsize="250%" bold>$9</span>
-              <span color="#666"> / month</span>
-            </div>
-            <p margintop="1rem" color="#555" lineheight="1.5">For power users managing personal infrastructure.</p>
-            <a href="account/create" margintop="1.5rem" padding="0.6rem 1.4rem" radius="0.5rem" bgcolor="black" color="white" align="center" mouseover="bgcolor:[#333]" mouseout="bgcolor:[black]">Start free trial</a>
-            <ul margintop="1.5rem" color="#444">
-              <li>5 GB cloud space</li>
-              <li>Full visibility dashboard</li>
-              <li>Cost optimization insights</li>
-              <li>30-day data retention</li>
-              <li>Email support</li>
-            </ul>
-          </div>
-
-          <!-- Pro -->
-          <div flex flexdirection="column" bgcolor="white" radius="1rem" padding="2rem" border="1px solid #ddd" height="100%">
-            <h5 bold>Pro</h5>
-            <div margintop="1rem">
-              <span fontsize="250%" bold>$19</span>
-              <span color="#666"> / month</span>
-            </div>
-            <p margintop="1rem" color="#555" lineheight="1.5">For professionals who need full control.</p>
-            <a href="account/create" margintop="1.5rem" padding="0.6rem 1.4rem" radius="0.5rem" border="1px solid black" align="center" bgcolor="white" color="black" mouseover="bgcolor:[#f0f0f0]" mouseout="bgcolor:[white]">Start free trial</a>
-            <ul margintop="1.5rem" color="#444">
-              <li>20 GB cloud space</li>
-              <li>Full visibility &amp; security</li>
-              <li>Hybrid management</li>
-              <li>90-day data retention</li>
-              <li>Priority support</li>
-            </ul>
-          </div>
-
+      <!-- Plus -->
+      <div flex flexdirection="column" bgcolor="white" radius="1rem" padding="2rem" border="2px solid black"
+        height="100%" relative>
+        <span absolute top="-0.75rem" left="50%" transform="translateX(-50%)" bgcolor="black" color="white"
+          padding="0.2rem 1rem" radius="1rem" fontsize="12px" bold>Most popular</span>
+        <h5 bold>Plus</h5>
+        <div margintop="1rem">
+          <span fontsize="250%" bold>$9</span>
+          <span color="#666"> / month</span>
         </div>
-      </section>
+        <p margintop="1rem" color="#555" lineheight="1.5">For power users managing personal infrastructure.</p>
+        <a href="account/create" margintop="1.5rem" padding="0.6rem 1.4rem" radius="0.5rem" bgcolor="black"
+          color="white" align="center" mouseover="bgcolor:[#333]" mouseout="bgcolor:[black]">Start free trial</a>
+        <ul margintop="1.5rem" color="#444">
+          <li>5 GB cloud space</li>
+          <li>Full visibility dashboard</li>
+          <li>Cost optimization insights</li>
+          <li>30-day data retention</li>
+          <li>Email support</li>
+        </ul>
+      </div>
 
-      <!-- Organization Pricing -->
-      <section id="pricing-organization" height="unset" bgcolor="whitesmoke" color="black" paddingtop="4rem" paddingbottom="5rem" hide>
-        <div screen-xxs="width:[90%];gridcolumns:[1fr]" screen-sm="width:[90%];gridcolumns:[1fr]" screen-md="width:[85%];gridcolumns:[1fr 1fr]" screen-xl="width:[75%];gridcolumns:[1fr 1fr 1fr]" screen-xxl="width:[65rem];gridcolumns:[1fr 1fr 1fr]" screen-wide="width:[75rem];gridcolumns:[1fr 1fr 1fr]" margin="0 auto"
-          grid gap="2rem" alignitems="start">
-
-          <!-- Team -->
-          <div flex flexdirection="column" bgcolor="white" radius="1rem" padding="2rem" border="1px solid #ddd" height="100%">
-            <h5 bold>Team</h5>
-            <div margintop="1rem">
-              <span fontsize="250%" bold>$7</span>
-              <span color="#666"> user/month</span>
-            </div>
-            <p margintop="1rem" color="#555" lineheight="1.5">For small teams getting started with cloud operations.</p>
-            <a href="account/create" margintop="1.5rem" padding="0.6rem 1.4rem" radius="0.5rem" border="1px solid black" align="center" bgcolor="white" color="black" mouseover="bgcolor:[#f0f0f0]" mouseout="bgcolor:[white]">Start free trial</a>
-            <ul margintop="1.5rem" color="#444">
-              <li>5 GB cloud space per user</li>
-              <li>Full visibility &amp; security</li>
-              <li>Cost optimization insights</li>
-              <li>30-day data retention</li>
-              <li>Email support</li>
-            </ul>
-          </div>
-
-          <!-- Business -->
-          <div flex flexdirection="column" bgcolor="white" radius="1rem" padding="2rem" border="2px solid black" height="100%" relative>
-            <span absolute top="-0.75rem" left="50%" transform="translateX(-50%)" bgcolor="black" color="white" padding="0.2rem 1rem" radius="1rem" fontsize="12px" bold>Most popular</span>
-            <h5 bold>Business</h5>
-            <div margintop="1rem">
-              <span fontsize="250%" bold>$15</span>
-              <span color="#666"> user/month</span>
-            </div>
-            <p margintop="1rem" color="#555" lineheight="1.5">For growing organizations that need full control.</p>
-            <a href="account/create" margintop="1.5rem" padding="0.6rem 1.4rem" radius="0.5rem" bgcolor="black" color="white" align="center" mouseover="bgcolor:[#333]" mouseout="bgcolor:[black]">Start free trial</a>
-            <ul margintop="1.5rem" color="#444">
-              <li>20 GB cloud space per user</li>
-              <li>Full visibility &amp; security</li>
-              <li>Hybrid management</li>
-              <li>Cost optimization insights</li>
-              <li>90-day data retention</li>
-              <li>SSO &amp; SAML</li>
-              <li>Priority support</li>
-            </ul>
-          </div>
-
-          <!-- Enterprise -->
-          <div flex flexdirection="column" bgcolor="white" radius="1rem" padding="2rem" border="1px solid #ddd" height="100%">
-            <h5 bold>Enterprise</h5>
-            <div margintop="1rem">
-              <span fontsize="250%" bold>Custom</span>
-            </div>
-            <p margintop="1rem" color="#555" lineheight="1.5">For organizations with advanced requirements.</p>
-            <a href="contact.html" margintop="1.5rem" padding="0.6rem 1.4rem" radius="0.5rem" border="1px solid black" align="center" bgcolor="white" color="black" mouseover="bgcolor:[#f0f0f0]" mouseout="bgcolor:[white]">Contact sales</a>
-            <ul margintop="1.5rem" color="#444">
-              <li>Unlimited cloud space</li>
-              <li>Advanced compliance &amp; audit</li>
-              <li>Custom data retention</li>
-              <li>On-prem deployment option</li>
-              <li>Dedicated support</li>
-              <li>SLA guarantee</li>
-            </ul>
-          </div>
-
+      <!-- Pro -->
+      <div flex flexdirection="column" bgcolor="white" radius="1rem" padding="2rem" border="1px solid #ddd"
+        height="100%">
+        <h5 bold>Pro</h5>
+        <div margintop="1rem">
+          <span fontsize="250%" bold>$19</span>
+          <span color="#666"> / month</span>
         </div>
-      </section>
+        <p margintop="1rem" color="#555" lineheight="1.5">For professionals who need full control.</p>
+        <a href="account/create" margintop="1.5rem" padding="0.6rem 1.4rem" radius="0.5rem" border="1px solid black"
+          align="center" bgcolor="white" color="black" mouseover="bgcolor:[#f0f0f0]" mouseout="bgcolor:[white]">Start
+          free trial</a>
+        <ul margintop="1.5rem" color="#444">
+          <li>20 GB cloud space</li>
+          <li>Full visibility &amp; security</li>
+          <li>Hybrid management</li>
+          <li>90-day data retention</li>
+          <li>Priority support</li>
+        </ul>
+      </div>
 
-      <section height="unset" align="center" screen-xs="padding:[5rem 2rem]" screen-wide="padding:[6rem]" bgcolor="black" color="white" bordertop="1px solid darkgray">
-        <h3 zoom="1.3" paddingbottom="1rem" bold>Ready to start?</h3>
-        <h5 letterspacing="0">Already have an Aleptra Account? <a href="./account/login">Sign In</a></h5>
-        <div margintop="2.5rem">
-          <a href="./account/create" screen-xs="transform:[scale(1)]" screen-xl="transform:[scale(1.1)]" minwidth="9rem"
-            minheight="2.7rem" radius="1rem" padding="0.6rem 1.4rem 0.6rem 1.4rem" class="button" bgcolor="black"
-            border="1px solid white" color="white" mouseover="bgcolor:[#222]" mouseout="bgcolor:[inherit]"
-            globalize-get>Create a free account</a>
-        </div>
-      </section>
+    </div>
+  </section>
 
-      <footer block bgcolor="white" color="black" padding="5rem 3rem">
-        <div grid gridcolumns="1fr 1fr 1fr 1fr" screen-xxs="gridcolumns:[1fr 1fr]" screen-md="gridcolumns:[1fr 1fr 1fr 1fr]" gap="2rem"
-          width="80%" maxwidth="70rem" margin="0 auto">
-          <div flex flexdirection="column" gap="0.5rem">
-            <h6 bold>Products</h6>
-            <a href="cloud/?app=applications">Applications</a>
-            <a href="marketplace">Systems</a>
-            <a href="marketplace">Platforms</a>
-          </div>
-          <div flex flexdirection="column" gap="0.5rem">
-            <h6 bold>Resources</h6>
-            <a href="pricing.html">Pricing</a>
-            <a href="documentation">Documentation</a>
-            <a href="blog">Blog</a>
-            <a href="changelog.html">Changelog</a>
-            <a href="status.html">Status</a>
-          </div>
-          <div flex flexdirection="column" gap="0.5rem">
-            <h6 bold>Company</h6>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="careers.html">Careers</a>
-            <a href="partners.html">Partners</a>
-          </div>
-          <div flex flexdirection="column" gap="0.5rem">
-            <h6 bold>Legal</h6>
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-            <a href="security.html">Security</a>
-          </div>
-        </div>
-        <div flex flexdirection="column" alignitems="center" margintop="2rem" paddingtop="2rem" bordertop="1px solid #ddd">
-          <img width="5rem" marginbottom="1rem" src="assets/img/logo_black.svg">
-          <small color="#666">©&nbsp;<span chronotize-get="Y"></span>&nbsp;Aleptra. All rights reserved.</small>
-        </div>
-      </footer>
+  <!-- Organization Pricing -->
+  <section id="pricing-organization" height="unset" bgcolor="whitesmoke" color="black" paddingtop="4rem"
+    paddingbottom="5rem" hide>
+    <div screen-xxs="width:[90%];gridcolumns:[1fr]" screen-sm="width:[90%];gridcolumns:[1fr]"
+      screen-md="width:[85%];gridcolumns:[1fr 1fr]" screen-xl="width:[75%];gridcolumns:[1fr 1fr 1fr]"
+      screen-xxl="width:[65rem];gridcolumns:[1fr 1fr 1fr]" screen-wide="width:[75rem];gridcolumns:[1fr 1fr 1fr]"
+      margin="0 auto" grid gap="2rem" alignitems="start">
 
-    </article>
-  </main>
+      <!-- Team -->
+      <div flex flexdirection="column" bgcolor="white" radius="1rem" padding="2rem" border="1px solid #ddd"
+        height="100%">
+        <h5 bold>Team</h5>
+        <div margintop="1rem">
+          <span fontsize="250%" bold>$7</span>
+          <span color="#666"> user/month</span>
+        </div>
+        <p margintop="1rem" color="#555" lineheight="1.5">For small teams getting started with cloud operations.</p>
+        <a href="account/create" margintop="1.5rem" padding="0.6rem 1.4rem" radius="0.5rem" border="1px solid black"
+          align="center" bgcolor="white" color="black" mouseover="bgcolor:[#f0f0f0]" mouseout="bgcolor:[white]">Start
+          free trial</a>
+        <ul margintop="1.5rem" color="#444">
+          <li>5 GB cloud space per user</li>
+          <li>Full visibility &amp; security</li>
+          <li>Cost optimization insights</li>
+          <li>30-day data retention</li>
+          <li>Email support</li>
+        </ul>
+      </div>
+
+      <!-- Business -->
+      <div flex flexdirection="column" bgcolor="white" radius="1rem" padding="2rem" border="2px solid black"
+        height="100%" relative>
+        <span absolute top="-0.75rem" left="50%" transform="translateX(-50%)" bgcolor="black" color="white"
+          padding="0.2rem 1rem" radius="1rem" fontsize="12px" bold>Most popular</span>
+        <h5 bold>Business</h5>
+        <div margintop="1rem">
+          <span fontsize="250%" bold>$15</span>
+          <span color="#666"> user/month</span>
+        </div>
+        <p margintop="1rem" color="#555" lineheight="1.5">For growing organizations that need full control.</p>
+        <a href="account/create" margintop="1.5rem" padding="0.6rem 1.4rem" radius="0.5rem" bgcolor="black"
+          color="white" align="center" mouseover="bgcolor:[#333]" mouseout="bgcolor:[black]">Start free trial</a>
+        <ul margintop="1.5rem" color="#444">
+          <li>20 GB cloud space per user</li>
+          <li>Full visibility &amp; security</li>
+          <li>Hybrid management</li>
+          <li>Cost optimization insights</li>
+          <li>90-day data retention</li>
+          <li>SSO &amp; SAML</li>
+          <li>Priority support</li>
+        </ul>
+      </div>
+
+      <!-- Enterprise -->
+      <div flex flexdirection="column" bgcolor="white" radius="1rem" padding="2rem" border="1px solid #ddd"
+        height="100%">
+        <h5 bold>Enterprise</h5>
+        <div margintop="1rem">
+          <span fontsize="250%" bold>Custom</span>
+        </div>
+        <p margintop="1rem" color="#555" lineheight="1.5">For organizations with advanced requirements.</p>
+        <a href="contact.html" margintop="1.5rem" padding="0.6rem 1.4rem" radius="0.5rem" border="1px solid black"
+          align="center" bgcolor="white" color="black" mouseover="bgcolor:[#f0f0f0]" mouseout="bgcolor:[white]">Contact
+          sales</a>
+        <ul margintop="1.5rem" color="#444">
+          <li>Unlimited cloud space</li>
+          <li>Advanced compliance &amp; audit</li>
+          <li>Custom data retention</li>
+          <li>On-prem deployment option</li>
+          <li>Dedicated support</li>
+          <li>SLA guarantee</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section height="unset" align="center" screen-xs="padding:[5rem 2rem]" screen-wide="padding:[6rem]" bgcolor="black"
+    color="white" bordertop="1px solid darkgray">
+    <h3 zoom="1.3" paddingbottom="1rem" bold>Ready to start?</h3>
+    <h5 letterspacing="0">Already have an Aleptra Account? <a href="./account/login">Sign In</a></h5>
+    <div margintop="2.5rem">
+      <a href="./account/create" screen-xs="transform:[scale(1)]" screen-xl="transform:[scale(1.1)]" minwidth="9rem"
+        minheight="2.7rem" radius="1rem" padding="0.6rem 1.4rem 0.6rem 1.4rem" class="button" bgcolor="black"
+        border="1px solid white" color="white" mouseover="bgcolor:[#222]" mouseout="bgcolor:[inherit]"
+        globalize-get>Create a free account</a>
+    </div>
+  </section>
+
+  <footer block bgcolor="white" color="black" padding="5rem 3rem">
+    <div grid gridcolumns="1fr 1fr 1fr 1fr" screen-xxs="gridcolumns:[1fr 1fr]" screen-md="gridcolumns:[1fr 1fr 1fr 1fr]"
+      gap="2rem" width="80%" maxwidth="70rem" margin="0 auto">
+      <div flex flexdirection="column" gap="0.5rem">
+        <h6 bold>Products</h6>
+        <a href="cloud/?app=applications">Applications</a>
+        <a href="marketplace">Systems</a>
+        <a href="marketplace">Platforms</a>
+      </div>
+      <div flex flexdirection="column" gap="0.5rem">
+        <h6 bold>Resources</h6>
+        <a href="pricing.html">Pricing</a>
+        <a href="documentation">Documentation</a>
+        <a href="blog">Blog</a>
+        <a href="changelog.html">Changelog</a>
+        <a href="status.html">Status</a>
+      </div>
+      <div flex flexdirection="column" gap="0.5rem">
+        <h6 bold>Company</h6>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="careers.html">Careers</a>
+        <a href="partners.html">Partners</a>
+      </div>
+      <div flex flexdirection="column" gap="0.5rem">
+        <h6 bold>Legal</h6>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="security.html">Security</a>
+      </div>
+    </div>
+    <div flex flexdirection="column" alignitems="center" margintop="2rem" paddingtop="2rem" bordertop="1px solid #ddd">
+      <img width="5rem" marginbottom="1rem" src="assets/img/logo_black.svg">
+      <small color="#666">©&nbsp;<span chronotize-get="Y"></span>&nbsp;Aleptra. All rights reserved.</small>
+    </div>
+  </footer>
+
+</article>
+</main>
