@@ -53,20 +53,22 @@
     <div bgcolor="black" height="2"></div>
   </div>
   <header class="topbar" flex maxheight="unset" width="100%" alignitems="center"
-    screen-xxs="padding:[0px 1rem 0px 1rem];height:[3.5rem]" screen-sm="padding:[0px 1.5rem 0px 1.5rem];height:[3.5rem]"
+    screen-xxs="padding:[0px 1rem 0px 1.5rem];height:[3.5rem]" screen-sm="padding:[0px 1.5rem 0px 1.5rem];height:[3.5rem]"
     screen-md="padding:[0 3rem 0 2.5rem];height:[4rem]" screen-lg="padding:[0px 3.5rem 0rem 3.5rem];height:[4rem]"
     color="white" zindex="60">
     <figure margin="0">
       <a href="./" key="0" marginright="2rem"><img height="40%" maxwidth="unset" src="assets/img/logo.svg"></a>
     </figure>
     <span height="1.5rem" width="1px" bgcolor="rgba(255,255,255,0.3)" marginright="1rem" screen-xxs="hide" screen-md="block"></span>
-    <details class="pr" screen-xxs="show" screen-md="hide">
-      <summary class="button" padding="0.5rem"><i class="icon24">≡</i></summary>
-      <div bgcolor="black" border="1px solid #333" class="pa" padding="1rem" minwidth="10rem" radius="0.5rem" zindex="100" margintop="0.5rem" flex flexdirection="column" gap="1rem">
-        <a click="overlay-dialog:#dialog" globalize-get>Products</a>
-        <a href="solutions.html" globalize-get>Solutions</a>
-        <a href="pricing.html" globalize-get>Pricing</a>
-        <a href="resources.html" globalize-get>Resources</a>
+    <details class="pr" screen-xxs="show" screen-md="hide" marginleft="auto">
+      <summary class="button" padding="0.5rem" radius="0.3rem" border="1px solid rgba(255,255,255,0.3)" height="2rem" width="2rem" justifycontent="center" alignitems="center" fontsize="32px" flex>≡</summary>
+      <div bgcolor="black" border="1px solid #333" class="pa" padding="1.5rem" minwidth="12rem" radius="0.75rem" zindex="100" margintop="0.75rem" right="0" flex flexdirection="column" gap="1.25rem" boxshadow="0 4px 12px rgba(0,0,0,0.5)">
+        <a click="overlay-dialog:#dialog" globalize-get fontsize="16px">Products</a>
+        <a href="solutions.html" globalize-get fontsize="16px">Solutions</a>
+        <a href="pricing.html" globalize-get fontsize="16px">Pricing</a>
+        <a href="resources.html" globalize-get fontsize="16px">Resources</a>
+        <hr height="1px" bgcolor="#333" width="100%">
+        <a href="account/login" globalize-get fontsize="16px">Login</a>
       </div>
     </details>
     <div flex gap="2rem" marginleft="1rem" alignitems="center" screen-xxs="hide" screen-md="flex">
@@ -75,7 +77,7 @@
       <a href="pricing.html" globalize-get bindglobal="href:href" if="([{href}]~[/pricing])/underline">Pricing</a>
       <a href="resources.html" globalize-get bindglobal="href:href" if="([{href}]~[/resources])/underline">Resources</a>
     </div>
-    <a href="account/login" globalize-get bindglobal="href:href" if="([{href}]~[/login])/underline" padding="0.3rem 1.2rem" border="1px solid white" radius="1rem" height="2rem" marginleft="auto">Login</a>
+    <a href="account/login" globalize-get bindglobal="href:href" if="([{href}]~[/login])/underline" padding="0.3rem 1.2rem" border="1px solid white" radius="1rem" height="2rem" marginleft="auto" screen-xxs="hide" screen-md="flex">Login</a>
   </header>
   <nav></nav>
   <aside height="100%" screen-xs="hide;fixed" screen-lg="flex;relative" scrollbar--set="width:thin;thumb:white" top="0"
