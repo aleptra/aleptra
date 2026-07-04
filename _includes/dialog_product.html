@@ -1,17 +1,33 @@
 <dialog id="dialog" keyboard-key="Escape" keyboard-action="overlay-close:#dialog" block bgcolor="rgba(0,0,0, .9)"
   onoverlay-dialog="start:[*];focus:#search" margin="0 auto" boxshadow="0px 0px 20px 1px black"
   color="white"
-  screen-xxs="width:[100%];height:[100%];maxheight:[100%];radius:[0.5rem];padding:[0rem];border:[none]"
-  screen-sm="width:[600px];minheight:[50vh];maxheight:[80vh];radius:[2rem];padding:[2rem];border:[1px solid dimgray]"
-  screen-md="width:[800px];minheight:[50vh];maxheight:[80vh];radius:[2rem];padding:[2rem];border:[1px solid dimgray]"
-  screen-lg="width:[900px];minheight:[60vh];maxheight:[80vh];radius:[2rem];padding:[2rem];border:[1px solid dimgray]"
-  overflow="hidden" alignself="center" hide>
+  screen-xxs="width:[100%];height:[100%];maxwidth:[100%];maxheight:[100%];radius:[0];padding:[1.5rem];margin:[0];border:[none];inset:[0]"
+  screen-md="width:[800px];minheight:[50vh];maxwidth:[90%];maxheight:[80vh];radius:[2rem];padding:[2rem];border:[1px solid dimgray];margin:[auto];inset:[unset]"
+  screen-lg="width:[900px];minheight:[60vh];maxheight:[80vh];radius:[2rem];padding:[2rem];border:[1px solid dimgray];margin:[auto];inset:[unset]"
+  overflow="hidden" alignself="center"
+  flex
+  flexdirection="column"
+  inset="0"
+  hide>
   <form id="productForm">
   <header flex flexdirection="column">
-    <input id="search" type="text" placeholder="Search for products ..." filtersearch--input
+    <input id="search" type="text"
+      placeholder="Search for products ..."
+      filtersearch--input
       onvaluechange="filtersearch--run:#apps"
-      width="100%" borderbottom="1px solid black" bgcolor="initial" color="white" autocomplete="off" autocorrect="false"
-      autospellcheck="false" paddingbottom="1rem" screen-xxs="fontsize:[16px]" screen-md="fontsize:[20px]">
+      padding="0"
+      minheight="unset"
+      maxlength="50"
+      width="100%"
+      borderbottom="1px solid black"
+      bgcolor="initial"
+      color="white"
+      autocomplete="off"
+      autocorrect="false"
+      autospellcheck="false"
+      paddingbottom="1rem"
+      screen-xxs="fontsize:[16px];padding:[.5rem 0]"
+      screen-md="fontsize:[20px];padding:[1rem 0]">
     <div flex gap="0.5rem" paddingtop="1rem" paddingbottom="1rem" flexwrap="wrap">
       <fieldset class="button" padding="0.4rem 0.8rem" radius="1rem" border="1px solid gray" screen-xxs="fontsize:[12px]" screen-md="fontsize:[13px]">
         <input type="checkbox" id="chk_app" filtersearch--group="Application" click="filtersearch--run:#apps" marginright=".3rem">
@@ -37,8 +53,8 @@
   <section id="apps" overflow="auto" paddingtop="1rem"
     screen-xxs="maxheight:[80vh];gridcolumns:[1fr 1fr]"
     screen-xs="maxheight:[80vh];gridcolumns:[1fr 1fr 1fr]"
-    screen-sm="maxheight:[80vh];gridcolumns:[1fr 1fr 1fr 1fr]"
-    screen-md="maxheight:[50vh];gridcolumns:[1fr 1fr 1fr 1fr 1fr]"
+    screen-sm="maxheight:[80vh];gridcolumns:[1fr 1fr 1fr]"
+    screen-md="maxheight:[50vh];gridcolumns:[1fr 1fr 1fr 1fr]"
     screen-lg="maxheight:[50vh];gridcolumns:[1fr 1fr 1fr 1fr 1fr]"
     screen-xl="maxheight:[50vh];gridcolumns:[1fr 1fr 1fr 1fr 1fr 1fr]"
     grid justifycontent="center" alignitems="start"
