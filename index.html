@@ -64,12 +64,16 @@
       <summary class="button" padding="0.5rem"><i class="icon24">≡</i></summary>
       <div bgcolor="black" border="1px solid #333" class="pa" padding="1rem" minwidth="10rem" radius="0.5rem" zindex="100" margintop="0.5rem" flex flexdirection="column" gap="1rem">
         <a click="overlay-dialog:#dialog" globalize-get>Products</a>
+        <a href="solutions.html" globalize-get>Solutions</a>
         <a href="pricing.html" globalize-get>Pricing</a>
+        <a href="resources.html" globalize-get>Resources</a>
       </div>
     </details>
     <div flex gap="2rem" marginleft="1rem" alignitems="center" screen-xxs="hide" screen-md="flex">
       <a click="overlay-dialog:#dialog" globalize-get bindglobal="href:href" if="([{href}]~[/workshop])/underline">Products</a>
+      <a href="solutions.html" globalize-get bindglobal="href:href" if="([{href}]~[/solutions])/underline">Solutions</a>
       <a href="pricing.html" globalize-get bindglobal="href:href" if="([{href}]~[/pricing])/underline">Pricing</a>
+      <a href="resources.html" globalize-get bindglobal="href:href" if="([{href}]~[/resources])/underline">Resources</a>
     </div>
     <a href="account/login" globalize-get bindglobal="href:href" if="([{href}]~[/login])/underline" padding="0.3rem 1.2rem" border="1px solid white" radius="1rem" height="2rem" marginleft="auto">Login</a>
   </header>
