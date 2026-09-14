@@ -1,0 +1,83 @@
+<script src="https://cdn.front.nu/nightly/front.js"></script>
+<template srcdoc="../../../index" src="../../../_templates/main"></template>
+<title globalize-get>Profile</title>
+<section maxwidth="48rem" width="100%" margin="0 auto" padding="2rem">
+  <div class="box shade1" padding="2rem">
+    <h1 globalize-get>Profile</h1>
+    <p margintop="1rem" color="dimgray">Manage your account profile.</p>
+
+    <div id="profile-loader" class="loader"></div>
+    <form id="profile-form" color="black" margintop="2rem" storage-bindlocal="auth"
+      data-src="https://api.aleptra.com/entity/?table=human&where=id.eq(00000000-0000-0000-0000-000000000001)"
+      data-header="Authorization:Bearer {auth}" data-loader="#profile-loader" data-iterate="true">
+      <div flex gap="1rem" flexwrap="wrap" flexdirection="row">
+        <label flex="1" minwidth="12rem">
+          <span display="block" marginbottom="0.35rem" globalize-get>First name</span>
+          <input name="first_name" data-get="first_name" type="text" width="100%" padding="0.75rem" bgcolor="whitesmoke"
+            height="2.75rem" border="1px solid silver" radius="0.25rem" color="black" autocomplete="given-name">
+        </label>
+        <label flex="1" minwidth="12rem">
+          <span display="block" marginbottom="0.35rem" globalize-get>Middle name</span>
+          <input name="middle_name" data-get="middle_name" type="text" width="100%" padding="0.75rem"
+            bgcolor="whitesmoke" height="2.75rem" border="1px solid silver" radius="0.25rem" color="black"
+            autocomplete="additional-name">
+        </label>
+        <label flex="1">
+          <span display="block" marginbottom="0.35rem" globalize-get>Last name</span>
+          <input name="last_name" data-get="last_name" type="text" width="100%" padding="0.75rem" bgcolor="whitesmoke"
+            height="2.75rem" border="1px solid silver" radius="0.25rem" color="black" autocomplete="family-name">
+        </label>
+      </div>
+
+      <span display="block" marginTop="1rem" marginbottom="0.35rem" globalize-get>Date of birth</span>
+      <div flex gap="1rem" flexwrap="wrap" flexdirection="row">
+        <label flex="1" minwidth="8rem">
+          <span display="block" marginbottom="0.35rem" color="dimgray" globalize-get>Year</span>
+          <input name="birth_date_year" data-get="birth_date_year" type="number" min="1900" max="2100" width="100%"
+            padding="0.75rem" bgcolor="whitesmoke" height="2.75rem" border="1px solid silver" radius="0.25rem"
+            color="black">
+        </label>
+        <label flex="1" minwidth="8rem">
+          <span display="block" marginbottom="0.35rem" color="dimgray" globalize-get>Month</span>
+          <input name="birth_date_month" data-get="birth_date_month" type="number" min="1" max="12" width="100%"
+            padding="0.75rem" bgcolor="whitesmoke" height="2.75rem" border="1px solid silver" radius="0.25rem"
+            color="black">
+        </label>
+        <label flex="1" minwidth="8rem">
+          <span display="block" marginbottom="0.35rem" color="dimgray" globalize-get>Day</span>
+          <input name="birth_date_day" data-get="birth_date_day" type="number" min="1" max="31" width="100%"
+            padding="0.75rem" bgcolor="whitesmoke" height="2.75rem" border="1px solid silver" radius="0.25rem"
+            color="black">
+        </label>
+      </div>
+
+      <div flex gap="1rem" flexwrap="wrap" marginTop="1rem">
+        <label flex="1" minwidth="12rem">
+          <span display="block" marginbottom="0.35rem" globalize-get>Country of residence</span>
+          <input name="residence_country" data-get="residence_country" type="text" width="100%" padding="0.75rem"
+            bgcolor="whitesmoke" height="2.75rem" border="1px solid silver" radius="0.25rem" color="black"
+            autocomplete="country-name">
+        </label>
+        <label flex="1" minwidth="12rem">
+          <span display="block" marginbottom="0.35rem" globalize-get>Sex</span>
+          <select name="sex" data-get="sex" width="100%" padding="0.75rem" bgcolor="whitesmoke" height="2.75rem"
+            border="1px solid silver" radius="0.25rem" color="black">
+            <option value="" globalize-get>Choose</option>
+            <option value="female" globalize-get>Female</option>
+            <option value="male" globalize-get>Male</option>
+            <option value="other" globalize-get>Other</option>
+          </select>
+        </label>
+      </div>
+
+            <label display="block" marginTop="1rem">
+        <span display="block" marginbottom="0.35rem" globalize-get>Email</span>
+        <input name="email" data-get="email" type="email" width="100%" padding="0.75rem" bgcolor="whitesmoke"
+          height="2.75rem" border="1px solid silver" radius="0.25rem" color="black" autocomplete="email">
+      </label>
+
+      <button type="submit" margintop="2rem" padding="0.6rem 1.4rem" radius="1rem" border="1px solid black"
+        bgcolor="black" color="white" mouseover="bgcolor:[#333]" mouseout="bgcolor:[black]" globalize-get>Save</button>
+    </form>
+  </div>
+</section>
