@@ -11,24 +11,24 @@
         placeholder="Search for Applications, Systems or Platforms ..." bordertop="0" borderbottom="1px solid white"
         fontsize="15" color="silver" height="2rem" width="100%" value="">
     </figure>
-    <details class="pr fr">
+    <details relative class="fr">
       <summary class="button p05 br50 hover-"><i class="icon24">⚙</i></summary>
-      <div bgcolor="white" color="black" class="pa r0 bs1 br05 zi50" padding="0.5rem" minwidth="12rem">
-        <a href="/account/profile/" class="p05 db hover-" globalize-get>Profile</a>
-        <a href="organization.html" class="p05 db hover-" globalize-get>Organization</a>
-        <a href="billing.html" class="p05 db hover-" globalize-get>Billing</a>
-        <a href="preferences.html" class="p05 db hover-" globalize-get>Preferences</a>
-        <a href="integrations.html" class="p05 db hover-" globalize-get>Integrations</a>
-        <a href="taxonomy.html" class="p05 db hover-" globalize-get>Taxonomy</a>
-        <a href="glossary.html" class="p05 db hover-" globalize-get>Glossary</a>
+      <div flex flexdirection="column" gap="0.75rem" justifycontent="flex-start" alignitems="flex-start" textalign="left" bgcolor="white" color="black" radius="0.5rem" absolute right="0" class="bs1" zindex="50" padding="1rem" minwidth="12rem">
+        <a href="/account/profile/" globalize-get>Profile</a>
+        <a href="organization.html" globalize-get>Organization</a>
+        <a href="billing.html" globalize-get>Billing</a>
+        <a href="preferences.html" globalize-get>Preferences</a>
+        <a href="integrations.html" globalize-get>Integrations</a>
+        <a href="taxonomy.html" globalize-get>Taxonomy</a>
+        <a href="glossary.html" globalize-get>Glossary</a>
         <hr class="bcblack01">
-        <a href="permissions.html" class="p05 db hover-" globalize-get>Permissions</a>
-        <a href="access-logs.html" class="p05 db hover-" globalize-get>Access logs</a>
-        <a href="sessions.html" class="p05 db hover-" globalize-get>Sessions</a>
-        <a href="api-keys.html" class="p05 db hover-" globalize-get>API Keys</a>
-        <a href="policies.html" class="p05 db hover-" globalize-get>Policies</a>
+        <a href="permissions.html" globalize-get>Permissions</a>
+        <a href="access-logs.html" globalize-get>Access logs</a>
+        <a href="sessions.html" globalize-get>Sessions</a>
+        <a href="api-keys.html" globalize-get>API Keys</a>
+        <a href="policies.html" globalize-get>Policies</a>
         <hr class="bcblack01">
-        <a click="storage-localremove:[auth]" href="./" class="p05 db hover- red" globalize-get>Logout</a>
+        <a click="auth-logout" href="/" globalize-get>Logout</a>
       </div>
     </details>
   </header>
