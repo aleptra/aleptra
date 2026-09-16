@@ -14,19 +14,23 @@
     <details relative class="fr">
       <summary class="button p05 br50 hover-"><i class="icon24">⚙</i></summary>
       <div flex flexdirection="column" gap="0.75rem" justifycontent="flex-start" alignitems="flex-start" textalign="left" bgcolor="white" color="black" radius="0.5rem" absolute right="0" class="bs1" zindex="50" padding="1rem" minwidth="12rem">
+        <small color="gray" globalize-get>Account</small>
         <a href="/account/profile/" globalize-get>Profile</a>
-        <a href="organization.html" globalize-get>Organization</a>
-        <a href="billing.html" globalize-get>Billing</a>
-        <a href="preferences.html" globalize-get>Preferences</a>
-        <a href="integrations.html" globalize-get>Integrations</a>
-        <a href="taxonomy.html" globalize-get>Taxonomy</a>
-        <a href="glossary.html" globalize-get>Glossary</a>
+        <a id="nav-org" href="/account/organization/" globalize-get click="setbg:gold:#nav-org;setbg:rgba(0,0,0,.5):#nav-profile,#nav-billing,#nav-preferences">Organization</a>
+        <a id="nav-billing" href="/account/billing/" globalize-get>Billing</a>
+        <a id="nav-preferences" href="/account/preferences/" globalize-get>Preferences</a>
         <hr class="bcblack01">
-        <a href="permissions.html" globalize-get>Permissions</a>
-        <a href="access-logs.html" globalize-get>Access logs</a>
-        <a href="sessions.html" globalize-get>Sessions</a>
-        <a href="api-keys.html" globalize-get>API Keys</a>
-        <a href="policies.html" globalize-get>Policies</a>
+        <small color="gray" globalize-get>Workspace</small>
+        <a href="/account/integrations/" globalize-get>Integrations</a>
+        <a href="/account/taxonomy/" globalize-get>Taxonomy</a>
+        <a href="/account/glossary/" globalize-get>Glossary</a>
+        <hr class="bcblack01">
+        <small color="gray" globalize-get>Security</small>
+        <a href="/account/permissions/" globalize-get>Permissions</a>
+        <a href="/account/access-logs/" globalize-get>Access logs</a>
+        <a href="/account/sessions/" globalize-get>Sessions</a>
+        <a href="/account/api-keys/" globalize-get>API Keys</a>
+        <a href="/account/policies/" globalize-get>Policies</a>
         <hr class="bcblack01">
         <a click="auth-logout" href="/" globalize-get>Logout</a>
       </div>

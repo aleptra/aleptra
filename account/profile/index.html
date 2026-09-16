@@ -11,7 +11,7 @@
       bindglobal="entity_id:authUser.entity_id"
       data-src="https://api.aleptra.com/entity/?table=human&where=id.eq({entity_id})"
       data-header="Authorization:Bearer {auth}" data-loader="#profile-loader" data-iterate="true">
-      <div flex gap="1rem" flexwrap="wrap" flexdirection="row">
+      <div flex gap="1rem" flexwrap="wrap" screen-xxs="flexdirection:[column]" screen-xl="flexdirection:[row]">
         <label flex="1" minwidth="12rem">
           <span display="block" marginbottom="0.35rem" globalize-get>First name</span>
           <input name="first_name" data-get="first_name.en" type="text" width="100%" padding="0.75rem" bgcolor="whitesmoke"

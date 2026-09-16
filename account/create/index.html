@@ -15,16 +15,24 @@
 
     <section id="register" storage="api" maxwidth="100%">
       <h1 globalize-get>Create your account</h1>
-      <h6 margintop="1rem" marginbottom="2rem" globalize-get>Create an account for personal use</h6>
+      <h6 id="account-type-description" margintop="1rem" marginbottom="2rem" globalize-get>Create an account for
+        personal use</h6>
       <div marginbottom="2rem">
-        <span radius="1rem 0rem 0rem 1rem" padding="0 1.5rem" lineheight="2.2" border="1px solid silver" color="black"
-          class="button" bgcolor="gold" minwidth="8.5rem">Personal</span><span radius="0rem 1rem 1rem 0rem"
-          padding="0 1.5rem" lineheight="2.2" border="1px solid silver" borderleft="0" bgcolor="rgba(0,0,0, .5)"
-          color="silver" minwidth="8.5rem" class="button" click="alert:[demo]">Organization</span>
+        <button id="personal-tab" radius="1rem 0rem 0rem 1rem" padding="0 1.5rem" lineheight="2.2"
+          border="1px solid silver" bgcolor="gold" color="black" minwidth="8.5rem"
+          click="show:#personal-form;hide:#organization-form;color:[black];bgcolor:#organization-tab:[black];color:#organization-tab:[silver]"
+          onclicked="settext:#account-type-description:[Create an account for personal use];bgcolor:[gold]"
+          >Personal</button><button
+          id="organization-tab" radius="0rem 1rem 1rem 0rem" padding="0 1.5rem" lineheight="2.2"
+          border="1px solid silver" borderleft="0" bgcolor="rgba(0,0,0, .5)" color="silver" minwidth="8.5rem"
+          click="show:#organization-form;hide:#personal-form;color:#personal-tab:[silver];bgcolor:#personal-tab:[black]"
+          onclicked="settext:#account-type-description:[Create an account for organization use];bgcolor:[gold]"
+          onbgcolor="color:[black]">Organization</button>
       </div>
 
-      <form method="post" color="black" bindasset="endpoint://api.aleptra.com/auth/register" action="{endpoint}"
-        data-onsuccess="hide:#register;show:#complete" data-onerror="show:#error">
+      <form id="personal-form" method="post" color="black" bindasset="endpoint://api.aleptra.com/auth/register"
+        action="https:{endpoint}" data-onsuccess="hide:#register;show:#complete" data-onerror="show:#error">
+        <input type="hidden" name="type" value="human">
 
         <div gap="5" screen-xxs="flexdirection:[column]" screen-lg="flexdirection:[row]">
           <div flexdirection="column">
@@ -116,18 +124,103 @@
             mouseout="bgcolor:[rgba(0,0,0, .6)]" border="1px solid white" color="white" class="button" type="submit"
             value="Create account" globalize-get>
         </div>
-
       </form>
 
+      <form id="organization-form" method="post" color="black" bindasset="endpoint://api.aleptra.com/auth/register"
+        action="https:{endpoint}" data-onsuccess="hide:#register;show:#complete" data-onerror="show:#organization-error"
+        hide>
+        <input type="hidden" name="type" value="organization">
 
+        <h6 color="gold">Responsible Person</h6>
+        <div gap="5" screen-xxs="flexdirection:[column]" screen-lg="flexdirection:[row]">
+          <div flexdirection="column">
+            <input flex="1" name="first_name" bgcolor="whitesmoke" type="text" padding="0.75rem" radius="2px"
+              class="phdark" placeholder="First Name" globalize-get
+              form-invalid="#org_first_name_tip:[Please enter your first name]" required><small lineheight="3"
+              id="org_first_name_tip" color="red"></small>
+          </div>
+          <div flexdirection="column">
+            <input flex="1" name="middle_name" bgcolor="whitesmoke" type="text" padding="0.75rem" radius="2px"
+              class="phdark" placeholder="Middle Name" globalize-get><small lineheight="3"></small>
+          </div>
+          <div flexdirection="column">
+            <input flex="1" name="last_name" bgcolor="whitesmoke" type="text" padding="0.75rem" radius="2px"
+              class="phdark" placeholder="Last Name" globalize-get
+              form-invalid="#org_last_name_tip:[Please enter your last name]" required><small lineheight="3"
+              id="org_last_name_tip" color="red"></small>
+          </div>
+        </div>
+
+        <div flexdirection="column" margin="5px 0">
+          <input flex="1" name="email" bgcolor="whitesmoke" type="text" padding="0.75rem" radius="2px" class="phdark"
+            placeholder="Email" globalize-get form-invalid="#org_email_tip:[Please enter your email]" required>
+          <small lineheight="3" id="org_email_tip" color="red"></small>
+        </div>
+
+        <div marginbottom="1rem" flex flexdirection="row" gap="5">
+          <div flex="1">
+            <input flex="1" name="password" bgcolor="whitesmoke" type="password" padding="0.75rem" radius="2px"
+              class="phdark" placeholder="Password" globalize-get form-invalid="#org_password:[Please enter a password]"
+              required>
+            <small lineheight="3" id="org_password" color="red"></small>
+          </div>
+          <div flex="1">
+            <input flex="1" name="password2" bgcolor="whitesmoke" type="password" padding="0.75rem" radius="2px"
+              class="phdark" placeholder="Confirm Password" globalize-get
+              form-invalid="#org_password2:[Please enter a password]" required>
+            <small lineheight="3" id="org_password2" color="red"></small>
+          </div>
+        </div>
+
+        <h6 color="gold" margintop="1rem">Organization Details</h6>
+        <div flexdirection="column" margin="5px 0">
+          <input flex="1" name="organization_name" bgcolor="whitesmoke" type="text" padding="0.75rem" radius="2px"
+            class="phdark" placeholder="Organization name" globalize-get required>
+        </div>
+
+        <div flexdirection="column" margin="5px 0">
+          <select height="unset" flex="1" padding="0.75rem" radius="2px" name="employee_count"
+            form-invalid="#org_employee_count_tip:[Please select your employee count]" required>
+            <option value="" data-iterate-skip>- Select number of employees -</option>
+            <option value="1-10">1-10</option>
+            <option value="11-50">11-50</option>
+            <option value="51-200">51-200</option>
+            <option value="201-500">201-500</option>
+            <option value="500+">500+</option>
+          </select>
+          <small lineheight="3" id="org_employee_count_tip" color="red"></small>
+        </div>
+
+        <div flexdirection="column" margin="5px 0">
+          <input flex="1" name="organization_email" bgcolor="whitesmoke" type="text" padding="0.75rem" radius="2px"
+            class="phdark" placeholder="Organization Email (public)" globalize-get>
+        </div>
+
+        <hr margintop="2rem" width="100%" bgcolor="rgba(0,0,0, .2)">
+
+        <div alignself="center" color="white">
+          <input name="participate" type="checkbox" value="1" class="mr05" checked>
+          <span inline>I agree to the <a href="#" color="lightyellow">Terms & Conditions</a></span>
+        </div>
+
+        <div id="organization-error" bgcolor="red" color="yellow" margintop="1rem" marginbottom="2rem" padding="1rem"
+          hide>
+          Something went wrong. Please try again.</div>
+        <div alignself="center">
+          <input margintop="1rem" radius="1rem" padding="0.5rem 1.4rem 0.5rem 1.4rem" minheight="2.7rem"
+            border="1px solid white" bgcolor="rgba(0,0,0, .6)" mouseover="bgcolor:[black]"
+            mouseout="bgcolor:[rgba(0,0,0, .6)]" color="white" class="button" type="submit" value="Create account"
+            globalize-get>
+        </div>
+      </form>
+    </section>
+
+    <section id="complete" class="pauto tac" hide>
+      <h1 globalize-get="thank_you!">Thank you!</h1>
+      <p globalize-get="page_register_complete">Your registration will be reviewed within 24 hours.</p>
+      <i class="icon mt2">&#8962;</i><a href="/" globalize-get="go_to_startpage">Go to startpage</a>
+    </section>
   </div>
-  </section>
-
-  <section id="complete" class="pauto tac" hide>
-    <h1 globalize-get="thank_you!">Thank you!</h1>
-    <p globalize-get="page_register_complete">Your registration will be reviewed within 24 hours.</p>
-    <i class="icon mt2">&#8962;</i><a href="/" globalize-get="go_to_startpage">Go to startpage</a>
-  </section>
 </article>
 
 <div include="_includes/terms.html"></div>

@@ -1,0 +1,53 @@
+<script src="https://cdn.front.nu/nightly/front.js"></script>
+<template srcdoc="../../../index" src="../../../_templates/main"></template>
+<title globalize-get>Preferences</title>
+
+<section maxwidth="48rem" width="100%" margin="0 auto" padding="2rem">
+  <div class="box shade1" padding="2rem">
+    <h1 globalize-get>Preferences</h1>
+    <p margintop="1rem" color="dimgray">Choose how Aleptra should work for you.</p>
+
+    <!-- Connect this form to a preferences endpoint when persistence is available. -->
+    <form id="preferences-form" color="black" margintop="2rem">
+      <div flex gap="1rem" flexwrap="wrap" screen-xxs="flexdirection:[column]" screen-md="flexdirection:[row]">
+        <label flex="1" minwidth="12rem">
+          <span display="block" marginbottom="0.35rem" globalize-get>Language</span>
+          <select name="language" width="100%" padding="0.75rem" bgcolor="whitesmoke" height="2.75rem"
+            border="1px solid silver" radius="0.25rem" color="black">
+            <option value="en" globalize-get>English</option>
+            <option value="sv" globalize-get>Swedish</option>
+          </select>
+        </label>
+        <label flex="1" minwidth="12rem">
+          <span display="block" marginbottom="0.35rem" globalize-get>Theme</span>
+          <select name="theme" width="100%" padding="0.75rem" bgcolor="whitesmoke" height="2.75rem"
+            border="1px solid silver" radius="0.25rem" color="black">
+            <option value="system" globalize-get>System</option>
+            <option value="light" globalize-get>Light</option>
+            <option value="dark" globalize-get>Dark</option>
+          </select>
+        </label>
+      </div>
+
+      <label display="block" marginTop="1rem">
+        <span display="block" marginbottom="0.35rem" globalize-get>Timezone</span>
+        <select name="timezone" width="100%" padding="0.75rem" bgcolor="whitesmoke" height="2.75rem"
+          border="1px solid silver" radius="0.25rem" color="black">
+          <option value="UTC">UTC</option>
+          <option value="Europe/Stockholm">Europe/Stockholm</option>
+          <option value="America/New_York">America/New_York</option>
+          <option value="America/Los_Angeles">America/Los_Angeles</option>
+        </select>
+      </label>
+
+      <label display="flex" alignitems="center" marginTop="1rem" gap="0.5rem">
+        <input name="email_notifications" type="checkbox" value="true">
+        <span globalize-get>Receive email notifications</span>
+      </label>
+
+      <button type="submit" margintop="2rem" padding="0.6rem 1.4rem" radius="1rem" border="1px solid black"
+        bgcolor="black" color="white" mouseover="bgcolor:[#333]" mouseout="bgcolor:[black]"
+        globalize-get>Save</button>
+    </form>
+  </div>
+</section>
