@@ -12,7 +12,7 @@
         fontsize="15" color="silver" height="2rem" width="100%" value="">
     </figure>
     <details relative class="fr">
-      <summary class="button" fontsize="2.5em">⚙</summary>
+      <summary class="button" fontsize="200%" lineheight="0.95">⚙</summary>
       <div flex flexdirection="column" gap="1rem" justifycontent="flex-start" alignitems="flex-start" textalign="left"
         bgcolor="white" color="black" radius="0.5rem" absolute right="0" class="bs1" zindex="50" padding="1rem"
         minwidth="15rem">
@@ -24,7 +24,7 @@
       </div>
     </details>
     <details relative class="fr" bindglobal="a:authUser.type" hide if="([[{a}]:[human]])/show">
-      <summary class="button p05 br50 hover-"><i class="icon24">👤</i></summary>
+      <summary fontsize="135%" radius="50%" bgcolor="white" height="1.6rem" width="1.6rem" overflow="hidden" align="center" padding="0.1rem">👤</summary>
       <div flex flexdirection="column" gap="1rem" justifycontent="flex-start" alignitems="flex-start" textalign="left"
         bgcolor="white" color="black" radius="0.5rem" absolute right="0" class="bs1" zindex="50" padding="1rem"
         minwidth="15rem">
@@ -36,8 +36,8 @@
         <a click="auth-logout" href="/" globalize-get>Logout</a>
       </div>
     </details>
-    <details relative class="fr" bindglobal="a:authUser.type" hide if="([[{a}]:[human]])/show">
-      <summary class="button p05 br50 hover-"><i class="icon24">🏢</i></summary>
+    <details relative class="fr" bindglobal="a:authUser.type" hide if="([[{a}]:[organization]])/show">
+      <summary fontsize="110%" radius="50%" bgcolor="white" height="1.6rem" width="1.6rem" overflow="hidden" align="center" padding="0.1rem">🏢</summary>
       <div flex flexdirection="column" gap="1rem" justifycontent="flex-start" alignitems="flex-start" textalign="left"
         bgcolor="white" color="black" radius="0.5rem" absolute right="0" class="bs1" zindex="50" padding="1rem"
         minwidth="15rem">
@@ -50,7 +50,7 @@
     </details>
   </header>
 
-  <aside class="w15 shade2 md_dn">
+  <aside class="w15 shade2 md_dn" bindglobal="a:authUser.type" hide if="([[{a}]:[organization]])/show">
     <nav class="sidebar">
       <form form-filter="true">
         <div class="md_du">
@@ -294,7 +294,7 @@
             <a href="marketplace.html" globalize-get filtersearch--select>Marketplace</a>
           </details>
 
-          <details>
+          <details hide if="([[{a}]:[human]])/show">
             <summary class="fwb" globalize-get>Legal</summary>
             <a href="contracts-lifecycle.html" globalize-get filtersearch--select>Contracts lifecycle</a>
             <a href="litigation.html" globalize-get filtersearch--select>Litigation</a>
@@ -311,7 +311,7 @@
             <a href="minutes.html" globalize-get filtersearch--select>Minutes</a>
           </details>
 
-          <details>
+          <details hide if="([[{a}]:[human]])/show">
             <summary class="fwb" globalize-get>Compliance</summary>
             <a href="regulations.html" globalize-get filtersearch--select>Regulations</a>
             <a href="audits.html" globalize-get filtersearch--select>Audits</a>
@@ -335,7 +335,7 @@
             <a href="siem.html" globalize-get filtersearch--select>SIEM</a>
           </details>
 
-          <details>
+          <details hide if="([[{a}]:[human]])/show">
             <summary class="fwb" globalize-get>Analytics</summary>
             <a href="dashboards.html" globalize-get filtersearch--select>Dashboards</a>
             <a href="custom-reports.html" globalize-get filtersearch--select>Custom reports</a>
@@ -643,6 +643,92 @@
             <a href="roles-permissions.html" globalize-get filtersearch--select>Roles / Permissions</a>
             <a href="branding.html" globalize-get filtersearch--select>Branding</a>
             <a href="localization.html" globalize-get filtersearch--select>Localization</a>
+          </details>
+        </div>
+
+      </form>
+    </nav>
+  </aside>
+
+  <!-- Human Account Apps Sidebar -->
+  <aside class="w15 shade2 md_dn" bindglobal="a:authUser.type" hide if="([[{a}]:[human]])/show">
+    <nav class="sidebar">
+      <form form-filter="true">
+        <div class="md_du">
+          <a click="toggle" keyboard-key="m" keyboard-action="click" keyboard-scope="body" clicktargetfield="aside[0]"
+            class="button pl1">
+            <i class="icon32">&#171;</i>
+          </a>
+        </div>
+
+        <input bgcolor="#333" class="p1 h3 mb1 shade1 fs08 w100" type="text" placeholder="Filter apps ..."
+          autocomplete="off" onvaluechange="filtersearch--run:#appsLinks">
+
+        <div id="appsLinks">
+          <a href="overview.html" class="fwb pl1 p05" globalize-get filtersearch--select>Overview</a>
+
+          <details>
+            <summary class="fwb" globalize-get>My Work</summary>
+            <a href="projects.html" globalize-get filtersearch--select>Projects</a>
+            <a href="tasks.html" globalize-get filtersearch--select>Tasks</a>
+            <a href="calendar.html" globalize-get filtersearch--select>Calendar</a>
+            <a href="events.html" globalize-get filtersearch--select>Events</a>
+            <a href="messages.html" globalize-get filtersearch--select>Messages</a>
+            <a href="notifications.html" globalize-get filtersearch--select>Notifications</a>
+          </details>
+
+          <details>
+            <summary class="fwb" globalize-get>Finance</summary>
+            <a href="invoices.html" globalize-get filtersearch--select>Invoices</a>
+            <a href="expenses.html" globalize-get filtersearch--select>Expenses</a>
+            <a href="payments.html" globalize-get filtersearch--select>Payments</a>
+            <a href="budgets.html" globalize-get filtersearch--select>Budgets</a>
+          </details>
+
+          <details>
+            <summary class="fwb" globalize-get>Sales</summary>
+            <a href="leads.html" globalize-get filtersearch--select>Leads</a>
+            <a href="opportunities.html" globalize-get filtersearch--select>Opportunities</a>
+            <a href="pipeline.html" globalize-get filtersearch--select>Pipeline</a>
+            <a href="quotes.html" globalize-get filtersearch--select>Quotes</a>
+            <a href="customers.html" globalize-get filtersearch--select>Customers</a>
+          </details>
+
+          <details>
+            <summary class="fwb" globalize-get>Support</summary>
+            <a href="tickets.html" globalize-get filtersearch--select>Tickets</a>
+            <a href="sla.html" globalize-get filtersearch--select>SLA</a>
+            <a href="knowledge-base.html" globalize-get filtersearch--select>Knowledge base</a>
+          </details>
+
+          <details>
+            <summary class="fwb" globalize-get>Marketing</summary>
+            <a href="campaigns.html" globalize-get filtersearch--select>Campaigns</a>
+            <a href="content.html" globalize-get filtersearch--select>Content</a>
+            <a href="social-media.html" globalize-get filtersearch--select>Social media</a>
+          </details>
+
+          <details>
+            <summary class="fwb" globalize-get>E-commerce</summary>
+            <a href="products.html" globalize-get filtersearch--select>Products</a>
+            <a href="orders.html" globalize-get filtersearch--select>Orders</a>
+            <a href="catalog.html" globalize-get filtersearch--select>Catalog</a>
+          </details>
+
+          <details>
+            <summary class="fwb" globalize-get>Analytics</summary>
+            <a href="dashboards.html" globalize-get filtersearch--select>Dashboards</a>
+            <a href="reports.html" globalize-get filtersearch--select>Reports</a>
+            <a href="kpis.html" globalize-get filtersearch--select>KPIs</a>
+          </details>
+
+          <details>
+            <summary class="fwb" globalize-get>Platform</summary>
+            <a href="forms.html" globalize-get filtersearch--select>Forms</a>
+            <a href="surveys.html" globalize-get filtersearch--select>Surveys</a>
+            <a href="scheduling.html" globalize-get filtersearch--select>Scheduling</a>
+            <a href="automations.html" globalize-get filtersearch--select>Automations</a>
+            <a href="notifications-engine.html" globalize-get filtersearch--select>Notifications</a>
           </details>
         </div>
 

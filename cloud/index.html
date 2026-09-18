@@ -1,6 +1,6 @@
 <script src="https://cdn.front.nu/nightly/front.js"></script>
 <template srcdoc="../../index" bindvar="color:indigo" src="../../_templates/launch"></template>
-<title bindquery="app:app" globalize-get>{app}</title>
+<title bindquery="app:app">{app}</title>
 
 <article data-src="assets/json/software.json" bindquery="app:app" data-filteritem="name:'{app}'" flex alignself="center"
   bgcolor="white" padding="2rem" screen-xxs="width:[90%]" screen-xl="width:[70%]" screen-wide="width:[60%]"
@@ -16,11 +16,11 @@
         <h6 margintop="1rem" marginbottom="2rem" data-get="description" globalize-get></h6>
 
         <form method="get" alignitems="center" color="black" bindasset="endpoint:api.persons_collection.endpoint"
-          action="https://note.aleptra.com" data-onsuccess="hide:#register;show:#complete" data-onerror="show:#error">
+          data-onsuccess="hide:#register;show:#complete" data-onerror="show:#error">
 
           <a href="https://note.aleptra.com" margintop="1rem" minheight="2.7rem" radius="1rem"
             padding="0.5rem 1.4rem 0.5rem 1.4rem" minheight="2.7rem" border="1px solid silver" bgcolor="black"
-            data-set="color:color" mouseover="bgcolor:[{color}]" mouseout="bgcolor:[black]" color="white" class="button"
+            data-set="color:color" mouseover="bgcolor:[{color}]" mouseout="bgcolor:[black]" color="white" target="_blank"
             globalize-get data-get="enabled:enabled" if="([{enabled}]:[true])/show?hide" onhide="show:#disabled">Launch
             application</a>
           <span id="disabled" bold hide>Not available</span>
