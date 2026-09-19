@@ -9,10 +9,12 @@ push:
 	fi
 	git -C admin push origin HEAD:main
 
+	git submodule foreach --recursive 'git push origin HEAD:main'
+
 	git add .
 	@if git diff --cached --quiet; then \
 		echo "No changes in parent repository"; \
 	else \
 		git commit --allow-empty-message -m ""; \
 	fi
-	git push --recurse-submodules=on-demand origin main
+	git push origin main
