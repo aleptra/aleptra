@@ -18,10 +18,10 @@
         <form method="get" alignitems="center" color="black" bindasset="endpoint:api.persons_collection.endpoint"
           data-onsuccess="hide:#register;show:#complete" data-onerror="show:#error">
 
-          <a href="https://note.aleptra.com" margintop="1rem" minheight="2.7rem" radius="1rem"
+          <a bindglobal="local:isLocalNetwork" href="{url}" margintop="1rem" minheight="2.7rem" radius="1rem"
             padding="0.5rem 1.4rem 0.5rem 1.4rem" minheight="2.7rem" border="1px solid silver" bgcolor="black"
-            data-set="color:color" mouseover="bgcolor:[{color}]" mouseout="bgcolor:[black]" color="white" target="_blank"
-            globalize-get data-get="enabled:enabled" if="([{enabled}]:[true])/show?hide" onhide="show:#disabled">Launch
+            data-set="color:color;url:url;id:id" mouseover="bgcolor:[{color}]" mouseout="bgcolor:[black]" color="white" target="_blank"
+            globalize-get data-get="enabled:enabled" if="([{enabled}]:[true])/show?hide" onif="if:([{local}]:[true])/sethref:[cloud/{id}]" onhide="show:#disabled">Launch
             application</a>
           <span id="disabled" bold hide>Not available</span>
 

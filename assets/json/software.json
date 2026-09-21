@@ -1,13 +1,16 @@
 [
   {
+    "id": "note",
     "name": "Note",
     "type": "Application",
     "icon": "https://note.aleptra.com/assets/img/icon.svg",
+    "url": "https://note.aleptra.com",
     "color": "indigo",
     "description": "Note is an application for taking notes and collaborating with others free-form.",
     "enabled": true
   },
   {
+    "id": "draw",
     "name": "Draw",
     "type": "Application",
     "icon": "/assets/icons/draw.svg",
@@ -15,6 +18,7 @@
     "enabled": false
   },
   {
+    "id": "save",
     "name": "Save",
     "type": "Application",
     "icon": "/assets/icons/storage.svg",
@@ -22,6 +26,7 @@
     "enabled": false
   },
   {
+    "id": "check",
     "name": "Check",
     "type": "Application",
     "icon": "/assets/icons/check.svg",
@@ -29,6 +34,7 @@
     "enabled": false
   },
   {
+    "id": "chat",
     "name": "Chat",
     "type": "Application",
     "icon": "/assets/icons/chat.svg",
@@ -36,6 +42,7 @@
     "enabled": false
   },
   {
+    "id": "track",
     "name": "Track",
     "type": "Application",
     "icon": "/assets/icons/track.svg",
@@ -43,6 +50,7 @@
     "enabled": false
   },
   {
+    "id": "mail",
     "name": "Mail",
     "type": "Application",
     "icon": "/assets/icons/placeholder.svg",
