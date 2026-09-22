@@ -38,7 +38,7 @@
     "name": "Chat",
     "type": "Application",
     "icon": "/assets/icons/chat.svg",
-    "color": "dodgerblue",
+    "color": "blue",
     "enabled": false
   },
   {
@@ -46,7 +46,7 @@
     "name": "Track",
     "type": "Application",
     "icon": "/assets/icons/track.svg",
-    "color": "tomato",
+    "color": "royalblue",
     "enabled": false
   },
   {
