@@ -1,4 +1,5 @@
 .PHONY: update push
+.DEFAULT_GOAL := push
 
 update:
 	git submodule sync --recursive
