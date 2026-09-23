@@ -1,6 +1,9 @@
 [submodule "cloud/note"]
 	path = cloud/note
 	url = git@github.com:aleptra/aleptra-note.git
+[submodule "cloud/save"]
+	path = cloud/save
+	url = git@github.com:aleptra/aleptra-save.git
 [submodule "admin"]
 	path = admin
 	url = git@github.com:aleptra/aleptra-admin.git
