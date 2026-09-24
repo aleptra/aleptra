@@ -23,7 +23,7 @@
     "type": "Application",
     "icon": "/assets/icons/storage.svg",
     "color": "orange",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": "check",
