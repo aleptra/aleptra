@@ -22,6 +22,7 @@
     "name": "Save",
     "type": "Application",
     "icon": "/assets/icons/storage.svg",
+    "url": "https://save.aleptra.com",
     "color": "orange",
     "enabled": true
   },
