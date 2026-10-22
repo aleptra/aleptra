@@ -30,7 +30,7 @@
         <h1 globalize-get>Profile</h1>
         <p margintop="1rem" color="dimgray">Manage your account profile.</p>
         <div id="profile-loader" class="loader"></div>
-        <form id="profile-form" color="black" margintop="2rem" storage-bindlocal="auth"
+        <form id="profile-form" color="black" margintop="2rem" storage-bindcookie="auth"
           bindglobal="entity_id:authUser.entity_id"
           data-src="https://api.aleptra.com/entity/?table=human&where=id.eq({entity_id})"
           data-header="Authorization:Bearer {auth}" data-loader="#profile-loader" data-iterate="true">

@@ -32,7 +32,7 @@
 
 <div id="loader" class="loader"></div>
 
-<div id="members" storage-bindlocal="auth" data-src="https://api.aleptra.com/entity/?table=private.organization_member"
+<div id="members" storage-bindcookie="auth" data-src="https://api.aleptra.com/entity/?table=private.organization_member"
   data-header="Authorization:Bearer {auth}" data-loader="#loader" data-onempty="#empty" data-onerror="show:#error"
   data-iterate="true">
   <div class="df aic" flex flexdirection="row" padding="1rem">
